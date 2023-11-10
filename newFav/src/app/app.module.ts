@@ -9,6 +9,11 @@ import { NavBarComponent } from './Components/Shared/nav-bar/nav-bar.component';
 import { FooterComponent } from './Components/Shared/footer/footer.component';
 import { HomePageComponent } from './Pages/home-page/home-page.component';
 import { ProfilePageComponent } from './Pages/profile-page/profile-page.component';
+import { LoginComponent } from './Components/login-Componentes/login/login.component';
+import { RegistrarUsuarioComponent } from './Components/login-Componentes/registrar-usuario/registrar-usuario.component';
+import { RecuperarPasswordComponent } from './Components/login-Componentes/recuperar-password/recuperar-password.component';
+import { VerificarCorreoComponent } from './Components/login-Componentes/verificar-correo/verificar-correo.component';
+import { SpinnerComponent } from './Components/Shared/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,12 @@ import { ProfilePageComponent } from './Pages/profile-page/profile-page.componen
     NavBarComponent,
     FooterComponent,
     HomePageComponent,
-    ProfilePageComponent
+    ProfilePageComponent,
+    LoginComponent,
+    RegistrarUsuarioComponent,
+    RecuperarPasswordComponent,
+    VerificarCorreoComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
