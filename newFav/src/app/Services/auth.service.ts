@@ -6,6 +6,9 @@ import { Injectable } from '@angular/core';
 
 
 export class AuthService {
+  clientId: string = 'b20bc978b3e240b997fbd6734c1d405d';
+  params: any = new URLSearchParams(window.location.search);
+  code: any = this.params.get('code');
 
   constructor(){}
   
