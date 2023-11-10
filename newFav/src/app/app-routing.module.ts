@@ -5,8 +5,9 @@ import { ProfilePageComponent } from './Pages/profile-page/profile-page.componen
 
 const routes: Routes = [
   {path: "home", component: HomePageComponent},
+  {path: "callback", component: HomePageComponent},
   {path: "profile", component: ProfilePageComponent},
-  {path: "**", redirectTo:"home"},
+  {path: "**", redirectTo: 'home'},
 
 ];
 
