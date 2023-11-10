@@ -3,15 +3,14 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-
-
 export class AuthService {
   clientId: string = 'b20bc978b3e240b997fbd6734c1d405d';
+  clientSecret: string = '6d78a3abb98a42b796ed99f4f355a9e5';
   params: any = new URLSearchParams(window.location.search);
   code: any = this.params.get('code');
 
-  constructor(){}
-  
+  constructor() {}
+
   async redirectToAuthCodeFlow(clientId: string) {
     const verifier = this.generateCodeVerifier(128);
     const challenge = await this.generateCodeChallenge(verifier);
@@ -67,5 +66,20 @@ export class AuthService {
       .replace(/\+/g, '-')
       .replace(/\//g, '_')
       .replace(/=+$/, '');
+  }
+
+ 
+  async getToken() {
+    const result = await fetch('https://accounts.spotify.com/api/token', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        Authorization: 'Basic ' + btoa(this.clientId + ':' + this.clientSecret),
+      },
+      body: 'grant_type=client_credentials',
+    });
+
+    const data = await result.json();
+    return data.access_token;
   }
 }
