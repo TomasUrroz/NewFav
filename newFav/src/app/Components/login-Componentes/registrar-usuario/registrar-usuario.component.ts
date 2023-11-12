@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/compat/auth'
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
-import { ErrorsService } from 'src/app/Services/errors.service';
+import { ErrorsService } from 'app/Services/errors.service';
 
 
 @Component({

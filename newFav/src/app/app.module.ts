@@ -21,7 +21,7 @@ import { RegistrarUsuarioComponent } from './Components/login-Componentes/regist
 import { RecuperarPasswordComponent } from './Components/login-Componentes/recuperar-password/recuperar-password.component';
 import { VerificarCorreoComponent } from './Components/login-Componentes/verificar-correo/verificar-correo.component';
 import { SpinnerComponent } from './Components/Shared/spinner/spinner.component';
-import { environment } from 'src/environments/environments';
+import { environment } from 'environments/environments';
 
 @NgModule({
   declarations: [

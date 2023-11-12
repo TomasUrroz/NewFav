@@ -3,7 +3,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { ErrorsService } from 'src/app/Services/errors.service';
+import { ErrorsService } from 'app/Services/errors.service';
 
 @Component({
   selector: 'app-login',
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit{
       //console.log(email,password);
       this.afAuth.signInWithEmailAndPassword(email,password).then((user) => {
         if(user.user?.emailVerified){
-          this.router.navigate(['/profile']);
+          this.router.navigate(['home']);
         }else{
           this.router.navigate(['/verificar-correo']);
         }

@@ -14,19 +14,22 @@ export class GetApiInfoService implements OnInit{
   }
 
   async asignToken(){
-    this.token = await this.as.getToken();
+    this.token = await this.as.getAccessToken(this.as.clientId, this.as.code);
   }
 
   async getTop50(){
     const limit = 10;
-
-    const result = await fetch(`https://api.spotify.com/v1/playlists/37i9dQZEVXbMDoHDwVN2tF`, {
-      method: 'GET',
-      headers: { Authorization: 'Bearer ' + this.token},
-    });
-
-    const data = await result.json();
-    return data.items;
+    try {
+      const result = await fetch(`https://api.spotify.com/v1/playlists/37i9dQZEVXbMDoHDwVN2tF`, {
+        method: 'GET',
+        headers: { Authorization: 'Bearer ' + this.token},
+      });
+      const data = await result.json();
+      return data.items;
+      } catch (error) {
+      console.log(error);
+      
+    }
   }
 
 

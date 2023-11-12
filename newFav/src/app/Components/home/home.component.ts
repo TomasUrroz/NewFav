@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/Services/auth.service';
-import { GetApiInfoService } from 'src/app/Services/get-api-info.service';
-import { UtilsUserService } from 'src/app/Services/utils-user.service';
+import { AuthService } from 'app/Services/auth.service';
+import { GetApiInfoService } from 'app/Services/get-api-info.service';
+import { UtilsUserService } from 'app/Services/utils-user.service';
 
 @Component({
   selector: 'app-home',

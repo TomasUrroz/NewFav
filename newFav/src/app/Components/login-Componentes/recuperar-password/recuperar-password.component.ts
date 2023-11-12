@@ -3,7 +3,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { ErrorsService } from 'src/app/Services/errors.service';
+import { ErrorsService } from 'app/Services/errors.service';
 
 @Component({
   selector: 'app-recuperar-password',
