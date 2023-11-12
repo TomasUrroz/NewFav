@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/Services/auth.service';
+import { GetApiInfoService } from 'src/app/Services/get-api-info.service';
 import { UtilsUserService } from 'src/app/Services/utils-user.service';
 
 @Component({
@@ -10,10 +11,11 @@ import { UtilsUserService } from 'src/app/Services/utils-user.service';
 export class HomeComponent implements OnInit {
   
 
-  constructor(private as: AuthService, private uss: UtilsUserService) {}
+  constructor(private as: AuthService, private uss: UtilsUserService, private gai: GetApiInfoService) {}
 
   ngOnInit(): void {
     this.startup();
+    console.log(this.gai.getTracks());
   }
 
   async startup() {

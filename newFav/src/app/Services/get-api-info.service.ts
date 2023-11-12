@@ -1,29 +1,60 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class GetApiInfoService {
-  constructor() {}
+export class GetApiInfoService implements OnInit{
+  constructor(private as: AuthService) {}
 
-  async getTracks(token: string, tracksEndPoint: string) {
+  token:any | undefined;
+
+  ngOnInit(): void {
+    this.asignToken()
+  }
+
+  async asignToken(){
+    this.token = await this.as.getToken();
+  }
+
+  async getTop50(){
     const limit = 10;
 
-    const result = await fetch(`${tracksEndPoint}?limit=${limit}`, {
+    const result = await fetch(`https://api.spotify.com/v1/playlists/37i9dQZEVXbMDoHDwVN2tF`, {
       method: 'GET',
-      headers: { Authorization: 'Bearer ' + token },
+      headers: { Authorization: 'Bearer ' + this.token},
     });
 
     const data = await result.json();
     return data.items;
   }
 
-  async getTrack(token: string, trackEndPoint: string) {
+
+  //async getTracks(tracksEndPoint: string) {
+  async getTracks() {
+    const limit = 10;
+    //const result = await fetch(`${tracksEndPoint}?limit=${limit}`, {
+      try {
+        const result = await fetch(`https://api.spotify.com/v1/playlists/37i9dQZEVXbMDoHDwVN2tF?limit=${limit}`, {
+          method: 'GET',
+          headers: { Authorization: 'Bearer ' + this.token},
+        });
+    
+        const data = await result.json();
+        return data.items;
+          } catch (error) {
+            console.log(error);
+      }
+  }
+
+  async getTrack( trackEndPoint: string) {
     const result = await fetch(`${trackEndPoint}`, {
       method: 'GET',
-      headers: { Authorization: 'Bearer ' + token },
+      headers: { Authorization: 'Bearer ' + this.token},
     });
     const data = await result.json();
     return data;
   }
+
+
 }
