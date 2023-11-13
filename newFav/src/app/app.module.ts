@@ -22,6 +22,7 @@ import { RecuperarPasswordComponent } from './Components/login-Componentes/recup
 import { VerificarCorreoComponent } from './Components/login-Componentes/verificar-correo/verificar-correo.component';
 import { SpinnerComponent } from './Components/Shared/spinner/spinner.component';
 import { environment } from 'environments/environments';
+import { DisplaySongComponent } from './Components/Shared/display-song/display-song.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { environment } from 'environments/environments';
     RecuperarPasswordComponent,
     VerificarCorreoComponent,
     SpinnerComponent,
+    DisplaySongComponent,
   ],
   imports: [
     BrowserModule,

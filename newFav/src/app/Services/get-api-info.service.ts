@@ -4,18 +4,14 @@ import { AuthService } from './auth.service';
 @Injectable({
   providedIn: 'root',
 })
-
-
-export class GetApiInfoService{
-
+export class GetApiInfoService {
   constructor(private as: AuthService) {}
 
-  token: string = "";
+  token: string = '';
 
   async asignToken() {
     this.token = await this.getToken();
   }
-
 
   async getTop50() {
     try {
@@ -238,13 +234,30 @@ export class GetApiInfoService{
     }
   }
 
+  async getRock() {
+    try {
+      await this.asignToken();
+      const result = await fetch(
+        `https://api.spotify.com/v1/playlists/37i9dQZF1EQpj7X7UK8OOF`,
+        {
+          method: 'GET',
+          headers: { Authorization: 'Bearer ' + this.token },
+        }
+      );
+      const data = await result.json();
+      return data.tracks.items[Math.floor(Math.random() * 50)];
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   async getToken() {
     const result = await fetch('https://accounts.spotify.com/api/token', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
-        Authorization: 'Basic ' + btoa(this.as.clientId + ':' + this.as.clientSecret),
+        Authorization:
+          'Basic ' + btoa(this.as.clientId + ':' + this.as.clientSecret),
       },
       body: 'grant_type=client_credentials',
     });
@@ -253,28 +266,15 @@ export class GetApiInfoService{
     return data.access_token;
   }
 
-
-  async getTracks(token: string, tracksEndPoint: string) {
-    const limit = 10;
-
-    const result = await fetch(`${tracksEndPoint}?limit=${limit}`, {
-      method: 'GET',
-      headers: { Authorization: 'Bearer ' + token },
-    });
-
+  //pa despues, ni idea si llego we
+  async getHoroscope(horos: string) {
+    const result = await fetch(
+      `https://aztro.sameerkumar.website/?sign=${horos}&day=today`,
+      {
+        method: 'POST',
+      }
+    );
     const data = await result.json();
-    return data.items;
+    return data.description;
   }
-
-  async getTrack(token: string, trackEndPoint: string) {
-    const result = await fetch(`${trackEndPoint}`, {
-      method: 'GET',
-      headers: { Authorization: 'Bearer ' + token },
-    });
-
-    const data = await result.json();
-    return data;
-  }
-
-
 }

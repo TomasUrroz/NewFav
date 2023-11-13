@@ -10,11 +10,19 @@ import { UtilsUserService } from 'app/Services/utils-user.service';
 })
 export class HomeComponent implements OnInit {
   
+  rockList: any[] = [];
 
   constructor(private as: AuthService, private uss: UtilsUserService, private gai: GetApiInfoService) {}
 
   ngOnInit(): void {
+    this.popuRock(3);
     console.log(this.gai.getPis());
+  }
+
+  async popuRock(x:number){
+    for(let i = 0 ; i<x ; i++){
+      this.rockList[i] = await this.gai.getRock();
+    }
   }
 
 }
