@@ -28,7 +28,7 @@ export class GetApiInfoService{
         }
       );
       const data = await result.json();
-      return data.tracks.items;
+      return data.tracks.items[Math.floor(Math.random() * 50)];
     } catch (error) {
       console.log(error);
     }
@@ -45,7 +45,7 @@ export class GetApiInfoService{
         }
       );
       const data = await result.json();
-      return data.tracks.items;
+      return data.tracks.items[Math.floor(Math.random() * 50)];
     } catch (error) {
       console.log(error);
     }
@@ -62,7 +62,7 @@ export class GetApiInfoService{
         }
       );
       const data = await result.json();
-      return data.tracks.items;
+      return data.tracks.items[Math.floor(Math.random() * 50)];
     } catch (error) {
       console.log(error);
     }
@@ -79,7 +79,7 @@ export class GetApiInfoService{
         }
       );
       const data = await result.json();
-      return data.tracks.items;
+      return data.tracks.items[Math.floor(Math.random() * 50)];
     } catch (error) {
       console.log(error);
     }
@@ -96,7 +96,7 @@ export class GetApiInfoService{
         }
       );
       const data = await result.json();
-      return data.tracks.items;
+      return data.tracks.items[Math.floor(Math.random() * 50)];
     } catch (error) {
       console.log(error);
     }
@@ -113,7 +113,7 @@ export class GetApiInfoService{
         }
       );
       const data = await result.json();
-      return data.tracks.items;
+      return data.tracks.items[Math.floor(Math.random() * 50)];
     } catch (error) {
       console.log(error);
     }
@@ -130,7 +130,7 @@ export class GetApiInfoService{
         }
       );
       const data = await result.json();
-      return data.tracks.items;
+      return data.tracks.items[Math.floor(Math.random() * 50)];
     } catch (error) {
       console.log(error);
     }
@@ -147,7 +147,7 @@ export class GetApiInfoService{
         }
       );
       const data = await result.json();
-      return data.tracks.items;
+      return data.tracks.items[Math.floor(Math.random() * 50)];
     } catch (error) {
       console.log(error);
     }
@@ -164,7 +164,7 @@ export class GetApiInfoService{
         }
       );
       const data = await result.json();
-      return data.tracks.items;
+      return data.tracks.items[Math.floor(Math.random() * 50)];
     } catch (error) {
       console.log(error);
     }
@@ -181,7 +181,7 @@ export class GetApiInfoService{
         }
       );
       const data = await result.json();
-      return data.tracks.items;
+      return data.tracks.items[Math.floor(Math.random() * 50)];
     } catch (error) {
       console.log(error);
     }
@@ -198,7 +198,7 @@ export class GetApiInfoService{
         }
       );
       const data = await result.json();
-      return data.tracks.items;
+      return data.tracks.items[Math.floor(Math.random() * 50)];
     } catch (error) {
       console.log(error);
     }
@@ -215,7 +215,7 @@ export class GetApiInfoService{
         }
       );
       const data = await result.json();
-      return data.tracks.items;
+      return data.tracks.items[Math.floor(Math.random() * 50)];
     } catch (error) {
       console.log(error);
     }
@@ -232,7 +232,7 @@ export class GetApiInfoService{
         }
       );
       const data = await result.json();
-      return data.tracks.items;
+      return data.tracks.items[Math.floor(Math.random() * 50)];
     } catch (error) {
       console.log(error);
     }

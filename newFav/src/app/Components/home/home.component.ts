@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(private as: AuthService, private uss: UtilsUserService, private gai: GetApiInfoService) {}
 
   ngOnInit(): void {
-    console.log(this.gai.getTop50());
+    console.log(this.gai.getPis());
   }
 
 }
