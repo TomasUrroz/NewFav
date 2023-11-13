@@ -34,6 +34,210 @@ export class GetApiInfoService{
     }
   }
 
+  async getGem() {
+    try {
+      await this.asignToken();
+      const result = await fetch(
+        `https://api.spotify.com/v1/playlists/37i9dQZF1DWWVULl5wUsL9`,
+        {
+          method: 'GET',
+          headers: { Authorization: 'Bearer ' + this.token },
+        }
+      );
+      const data = await result.json();
+      return data.tracks.items;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async getAries() {
+    try {
+      await this.asignToken();
+      const result = await fetch(
+        `https://api.spotify.com/v1/playlists/37i9dQZF1DX2DC3Q7JOmYe`,
+        {
+          method: 'GET',
+          headers: { Authorization: 'Bearer ' + this.token },
+        }
+      );
+      const data = await result.json();
+      return data.tracks.items;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async getTau() {
+    try {
+      await this.asignToken();
+      const result = await fetch(
+        `https://api.spotify.com/v1/playlists/37i9dQZF1DWZTUo2Td8Xxx`,
+        {
+          method: 'GET',
+          headers: { Authorization: 'Bearer ' + this.token },
+        }
+      );
+      const data = await result.json();
+      return data.tracks.items;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async getCancer() {
+    try {
+      await this.asignToken();
+      const result = await fetch(
+        `https://api.spotify.com/v1/playlists/37i9dQZF1DXaeX3MJpiD4U`,
+        {
+          method: 'GET',
+          headers: { Authorization: 'Bearer ' + this.token },
+        }
+      );
+      const data = await result.json();
+      return data.tracks.items;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async getLeo() {
+    try {
+      await this.asignToken();
+      const result = await fetch(
+        `https://api.spotify.com/v1/playlists/37i9dQZF1DX7cvHpkIJFt2`,
+        {
+          method: 'GET',
+          headers: { Authorization: 'Bearer ' + this.token },
+        }
+      );
+      const data = await result.json();
+      return data.tracks.items;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async getVirg() {
+    try {
+      await this.asignToken();
+      const result = await fetch(
+        `https://api.spotify.com/v1/playlists/37i9dQZF1DX6PdsVYbP4rI`,
+        {
+          method: 'GET',
+          headers: { Authorization: 'Bearer ' + this.token },
+        }
+      );
+      const data = await result.json();
+      return data.tracks.items;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async getLib() {
+    try {
+      await this.asignToken();
+      const result = await fetch(
+        `https://api.spotify.com/v1/playlists/37i9dQZF1DXco4NYQOMLiT`,
+        {
+          method: 'GET',
+          headers: { Authorization: 'Bearer ' + this.token },
+        }
+      );
+      const data = await result.json();
+      return data.tracks.items;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async getScorpio() {
+    try {
+      await this.asignToken();
+      const result = await fetch(
+        `https://api.spotify.com/v1/playlists/37i9dQZF1DWWVULl5wUsL9`,
+        {
+          method: 'GET',
+          headers: { Authorization: 'Bearer ' + this.token },
+        }
+      );
+      const data = await result.json();
+      return data.tracks.items;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async getSagit() {
+    try {
+      await this.asignToken();
+      const result = await fetch(
+        `https://api.spotify.com/v1/playlists/37i9dQZF1DWWcXJ7QPlujx`,
+        {
+          method: 'GET',
+          headers: { Authorization: 'Bearer ' + this.token },
+        }
+      );
+      const data = await result.json();
+      return data.tracks.items;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async getCapri() {
+    try {
+      await this.asignToken();
+      const result = await fetch(
+        `https://api.spotify.com/v1/playlists/37i9dQZF1DX2rcqmLx0nK4`,
+        {
+          method: 'GET',
+          headers: { Authorization: 'Bearer ' + this.token },
+        }
+      );
+      const data = await result.json();
+      return data.tracks.items;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async getAqu() {
+    try {
+      await this.asignToken();
+      const result = await fetch(
+        `https://api.spotify.com/v1/playlists/37i9dQZF1DX7F9VDRJOFhw`,
+        {
+          method: 'GET',
+          headers: { Authorization: 'Bearer ' + this.token },
+        }
+      );
+      const data = await result.json();
+      return data.tracks.items;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async getPis() {
+    try {
+      await this.asignToken();
+      const result = await fetch(
+        `https://api.spotify.com/v1/playlists/37i9dQZF1DWX0EDWtabVRv`,
+        {
+          method: 'GET',
+          headers: { Authorization: 'Bearer ' + this.token },
+        }
+      );
+      const data = await result.json();
+      return data.tracks.items;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
 
   async getToken() {
     const result = await fetch('https://accounts.spotify.com/api/token', {
