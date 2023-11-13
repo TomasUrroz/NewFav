@@ -14,20 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(private as: AuthService, private uss: UtilsUserService, private gai: GetApiInfoService) {}
 
   ngOnInit(): void {
-    this.startup();
-    console.log(this.gai.getTracks());
+    console.log(this.gai.getTop50());
   }
 
-  async startup() {
-    if (!this.as.code) {
-      this.as.redirectToAuthCodeFlow(this.as.clientId);
-    } else {
-      const accessToken = await this.as.getAccessToken(
-        this.as.clientId,
-        this.as.code
-      );
-      const profile = await this.uss.fetchProfile(accessToken);
-      this.uss.populateUI(profile);
-    }
-  }
 }
