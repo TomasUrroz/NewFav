@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: "profile", component: ProfilePageComponent},
   
   {path: "", redirectTo: 'login', pathMatch:'full'},
-  {path: "login", component: LoginComponent},
+  //{path: "login", component: LoginComponent},
   {path: "registrar-usuario", component: RegistrarUsuarioComponent},
   {path: "verificar-correo", component: RegistrarUsuarioComponent},
   {path: "recuperar-password", component: RecuperarPasswordComponent},
