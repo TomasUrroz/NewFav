@@ -1,26 +1,8 @@
-<div class="container">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-      <div class="col-md-3 mb-2 mb-md-0">
-        <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-          <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-        </a>
-      </div>
+<app-nav-bar></app-nav-bar>
 
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-        <li><a href="#" class="nav-link px-2">Features</a></li>
-        <li><a href="#" class="nav-link px-2">Pricing</a></li>
-        <li><a href="#" class="nav-link px-2">FAQs</a></li>
-        <li><a href="#" class="nav-link px-2">About</a></li>
-      </ul>
-
-      <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2" (click)="logOut()">LogOut</button>
-      </div>
-    </header>
-
+    <div class="container">
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-        <h1 class="display-4 fw-normal"> <strong> Bienvenido a New Fav! </strong> </h1>
+        <h1 class="display-4 fw-normal"> <strong> Bienvenido a New Fav </strong> </h1>
         <p class="fs-5 text-muted">{{ dataUser?.email }}</p>
         <p class="lead text-body-secondary">Welcome to New Fav, a cutting-edge social network designed for enthusiasts of all things entertainment. New Fav sets itself apart by initially focusing on the world of music, allowing users to seamlessly share and enjoy their favorite tunes with friends. Our platform provides a dynamic and immersive environment for music lovers to connect, discover, and amplify their passion. </p>
          
@@ -29,10 +11,8 @@
       <section class="arribita pricing-header p-3 pb-md-4 mx-auto text-center">
           <div class="col-lg-6 col-md-8 mx-auto row py-lg-5">
             <h2 class="fw-light"> Como se siente: </h2>
-             <p>
-              <a href="#" class="btn btn-primary my-2 mr-2">Main call to action</a>
-              <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-            </p>
+            <p class="lead text-body-secondary">Seleccione su mood. </p>
+            <p>
           </div>
           <div class="col-lg-6 col-md-8 mx-auto row py-lg-5">
             <h2 class="fw-light"> <strong>Horoscopo</strong> </h2>
@@ -42,11 +22,11 @@
       </section>
   </div>
 
-<main>
+<section class="main">
 
     <div class="album py-5 bg-body-tertiary">
       <div class="container">
-          <h3>hola</h3>
+          <h2 class="musicNAME mb-3 mt-3">Rock</h2>
 <div>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
               <div class="col">
@@ -89,7 +69,7 @@
                 </div>
               </div>
 </div>
-          <h3>hola 2</h3>
+          <h3 class="musicNAME mb-3 mt-3"> Pop </h3>
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">      
           <div class="col">
             <div class="card shadow-sm">
@@ -131,7 +111,7 @@
             </div>
           </div>
 </div>
-   <h3>hola 3</h3>       
+   <h3 class="musicNAME mb-3 mt-3" > Trap </h3>       
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"> 
           <div class="col">
             <div class="card shadow-sm">
@@ -213,4 +193,4 @@
       </ul>
     </div>
 
-</main>
+</section>
