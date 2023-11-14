@@ -32,7 +32,35 @@ html, body{
 }
 
 
+.navegacion a{
+    color: rgb(246, 242, 242);
+    margin: .5rem;
+    text-decoration: none;
+}
 
+.img{
+    width: 225px;
+    height: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.shadow-sm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* .navegacion{
+    display: flex;
+    justify-content: end;
+    background-color: #f0f0f0;
+    margin: .5rem;
+}
+header hr{
+    border: .5px solid #5c555522;
+} */
 
 
 
