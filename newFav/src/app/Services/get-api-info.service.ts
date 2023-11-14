@@ -24,7 +24,7 @@ export class GetApiInfoService {
         }
       );
       const data = await result.json();
-      return data.tracks.items[Math.floor(Math.random() * 50)];
+      return  data.tracks.items[Math.floor(Math.random() * 50)];
     } catch (error) {
       console.log(error);
     }
@@ -239,6 +239,40 @@ export class GetApiInfoService {
       await this.asignToken();
       const result = await fetch(
         `https://api.spotify.com/v1/playlists/37i9dQZF1EQpj7X7UK8OOF`,
+        {
+          method: 'GET',
+          headers: { Authorization: 'Bearer ' + this.token },
+        }
+      );
+      const data = await result.json();
+      return data.tracks.items[Math.floor(Math.random() * 50)];
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async getHipHop() {
+    try {
+      await this.asignToken();
+      const result = await fetch(
+        `https://api.spotify.com/v1/playlists/37i9dQZF1EQnqst5TRi17F`,
+        {
+          method: 'GET',
+          headers: { Authorization: 'Bearer ' + this.token },
+        }
+      );
+      const data = await result.json();
+      return data.tracks.items[Math.floor(Math.random() * 50)];
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async getPop() {
+    try {
+      await this.asignToken();
+      const result = await fetch(
+        `https://api.spotify.com/v1/playlists/37i9dQZF1EQncLwOalG3K7`,
         {
           method: 'GET',
           headers: { Authorization: 'Bearer ' + this.token },

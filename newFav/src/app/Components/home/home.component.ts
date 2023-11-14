@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Track } from 'app/Interfaces/interfaces';
 import { AuthService } from 'app/Services/auth.service';
 import { GetApiInfoService } from 'app/Services/get-api-info.service';
 import { UtilsUserService } from 'app/Services/utils-user.service';
@@ -11,18 +12,23 @@ import { UtilsUserService } from 'app/Services/utils-user.service';
 export class HomeComponent implements OnInit {
   
   rockList: any[] = [];
+  popList: any[] = [];
+  hipHopList: any[] = [];
+  pis:Track | undefined ;
 
   constructor(private as: AuthService, private uss: UtilsUserService, private gai: GetApiInfoService) {}
 
   ngOnInit(): void {
-    this.popuRock(3);
-    console.log(this.gai.getPis());
+    this.popuLists(3);
   }
 
-  async popuRock(x:number){
+  async popuLists(x:number){
     for(let i = 0 ; i<x ; i++){
       this.rockList[i] = await this.gai.getRock();
+      this.popList[i] = await this.gai.getPop();
+      this.hipHopList[i] = await this.gai.getHipHop();
     }
   }
+
 
 }
