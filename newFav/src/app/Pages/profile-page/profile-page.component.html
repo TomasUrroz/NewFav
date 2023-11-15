@@ -13,14 +13,56 @@
             <h2 class="fw-light"> Como se siente: </h2>
             <p class="lead text-body-secondary">Seleccione su mood. </p>
             <p>
+              <div class="containerUNO">
+                <!-- Fila 1 -->
+                <div class="button-containerUNO">Sad</div>
+                <div class="button-containerUNO">Chill</div>
+                <div class="button-containerUNO">Alegría</div>
+                <!-- Fila 2 -->
+                <div class="button-containerUNO">Caminar</div>
+                <div class="button-containerUNO">Gym</div>
+                <div class="button-containerUNO">Limpiar</div>
+                <!-- Fila 3 -->
+                <div class="button-containerUNO">Nostalgia</div>
+                <div class="button-containerUNO">Otros</div>
+                <div class="button-containerUNO">Otros</div>
+              
+              </div>
           </div>
           <div class="col-lg-6 col-md-8 mx-auto row py-lg-5">
             <h2 class="fw-light"> <strong>Horoscopo</strong> </h2>
             <p class="lead text-body-secondary">Seleccione su horoscopo. </p>
+            <div class="containerDOS">
+              <!-- Fila 1 -->
+              <div class="button-containerDOS">Aries</div>
+              <div class="button-containerDOS">Tauro</div>
+              <div class="button-containerDOS">Géminis</div>
+            
+              <!-- Fila 2 -->
+              <div class="button-containerDOS">Cáncer</div>
+              <div class="button-containerDOS">Leo</div>
+              <div class="button-containerDOS">Virgo</div>
+            
+              <!-- Fila 3 -->
+              <div class="button-containerDOS">Piscis</div>
+              <div class="button-containerDOS">Libra</div>
+              <div class="button-containerDOS">Escorpión</div>
+            
+              <!-- Fila 4 -->
+              <div class="button-containerDOS">Sagitario</div>
+              <div class="button-containerDOS">Capricornio</div>
+              <div class="button-containerDOS">Acuario</div>
+            </div>
             <p>
           </div>
       </section>
   </div>
+
+
+
+
+
+<!-- cuadradon de abajo -->
 
 <section class="main">
   <div class="album py-5 bg-body-tertiary">
@@ -58,7 +100,7 @@
                           <div class="card shadow-sm">
                             <img class="img" src="../../../assets/img/login2.png">
                             <div class="card-body">
-                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              <p class="card-text">This is a wider card with supporting text below as a natural.</p>
                               <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                   <button type="button" class="btn btn-sm btn-outline-secondary">Listen</button>
@@ -150,7 +192,9 @@
             <div class="card shadow-sm">
               <img class="img" src="../../../assets/img/login2.png">
               <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">{{ hipHopList[0].track.name }} <br />{{
+                  hipHopList[0].track.artists[0].name
+                }}</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <button
