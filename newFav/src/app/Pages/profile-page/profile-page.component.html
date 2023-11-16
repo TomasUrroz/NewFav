@@ -7,13 +7,14 @@
         <p class="lead text-body-secondary"><strong>Welcome to New Fav, a cutting-edge social network designed for enthusiasts of all things entertainment. New Fav sets itself apart by initially focusing on the world of music, allowing users to seamlessly share and enjoy their favorite tunes with friends. Our platform provides a dynamic and immersive environment for music lovers to connect, discover, and amplify their passion.</strong> </p>
         <div class="cancionRecomendada">
           <div class="image-container">
-            <img src="../../../assets/img/mountain.jpg" alt="Imagen">
+            <img src="{{recomToday.track.album.images[1].url}}" alt="Imagen">
           </div>
           <div class="text-container">
             <h5><strong>Cancion recomendada</strong></h5>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, odio id sagittis consectetur, ex mi aliquam lectus, ut euismod justo mi eget justo.
-            </p>
+              {{ recomToday.track.name }} <br />{{
+                recomToday.track.artists[0].name
+              }}            </p>
           </div>
         </div>
          

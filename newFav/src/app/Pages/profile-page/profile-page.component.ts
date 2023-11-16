@@ -35,9 +35,13 @@ export class ProfilePageComponent implements OnInit {
   async popuLists(x: number) {
     this.recomToday = await this.gai.getTop50();
     for (let i = 0; i < x; i++) {
-      this.rockList[i] = await this.gai.getRock();
-      this.popList[i] = await this.gai.getPop();
-      this.hipHopList[i] = await this.gai.getHipHop();
+      try {
+        this.rockList[i] = await this.gai.getRock();
+        this.popList[i] = await this.gai.getPop();
+        this.hipHopList[i] = await this.gai.getHipHop();
+        } catch (error) {
+        console.log(error);
+      }
     }
   }
   logOut() {
