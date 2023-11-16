@@ -96,6 +96,7 @@ h3{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 10px;
+
   }
 
   .button-containerDOS {
@@ -109,7 +110,8 @@ h3{
     border-radius: 10px;
     width: 90px;
     height: 40px;
-    
+    text-decoration: none;
+    color: #ffffff;
   }
 
   .containerUNO {
@@ -134,6 +136,7 @@ h3{
     border-radius: 10px;
     transition: background-color 0.3s ease;
     
+    text-decoration: none;
   }
 
   .button-containerUNO:hover {
@@ -174,3 +177,6 @@ h3{
     line-height: 1.5;
   }
   
+  .img{
+    margin-top: 1.7rem;
+  }
