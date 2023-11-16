@@ -1,68 +1,72 @@
 <app-nav-bar></app-nav-bar>
 
-    <div class="container">
-    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-        <h1 class="display-4 fw-normal"> <strong> Bienvenido a New Fav </strong> </h1>
-        <p class="fs-5 text-muted">¡{{ dataUser?.email }}!</p>
-        <p class="lead text-body-secondary"><strong>Welcome to New Fav, a cutting-edge social network designed for enthusiasts of all things entertainment. New Fav sets itself apart by initially focusing on the world of music, allowing users to seamlessly share and enjoy their favorite tunes with friends. Our platform provides a dynamic and immersive environment for music lovers to connect, discover, and amplify their passion.</strong> </p>
-        <div class="cancionRecomendada">
-          <div class="image-container">
-            <img src="{{recomToday.track.album.images[1].url}}" alt="Imagen">
-          </div>
-          <div class="text-container">
-            <h5><strong>Cancion recomendada</strong></h5>
-            <p>
-              {{ recomToday.track.name }} <br />{{
-                recomToday.track.artists[0].name
-              }}            </p>
-          </div>
-        </div>
-         
+<div class="container">
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal"> <strong> Bienvenido a New Fav </strong> </h1>
+    <p class="fs-5 text-muted">¡{{ dataUser?.email }}!</p>
+    <p class="lead text-body-secondary"><strong>Welcome to New Fav, a cutting-edge social network designed for
+        enthusiasts of all things entertainment. New Fav sets itself apart by initially focusing on the world of music,
+        allowing users to seamlessly share and enjoy their favorite tunes with friends. Our platform provides a dynamic
+        and immersive environment for music lovers to connect, discover, and amplify their passion.</strong> </p>
+    <div class="cancionRecomendada">
+      <div class="image-container">
+        <img src="{{recomToday.track.album.images[1].url}}" alt="Imagen">
       </div>
-      
-      <section class="arribita pricing-header p-3 pb-md-4 mx-auto text-center">
-          <div class="col-lg-6 col-md-8 mx-auto row py-lg-5">
-            <h2 class="fw-light"> <strong> Como se siente: </strong> </h2>
-            <p class="lead text-body-secondary">Seleccione su mood. </p>
-            <p>
-              <div class="containerUNO">
-                <!-- Fila 1 -->
-                <a href="{{sad}}"  class="button-containerUNO">Sad</a>
-                <a href="{{chill}}"  class="button-containerUNO">Chill</a>
-                <a href="{{happy}}"  class="button-containerUNO">Alegría</a>
-                <!-- Fila 2 -->
-                <a href="{{walk}}"  class="button-containerUNO">Caminar</a>
-                <a href="{{gym}}"  class="button-containerUNO">Gym</a>
-                <a href="{{clean}}"  class="button-containerUNO">Limpiar</a>
-              
-              </div>
-          </div>
-          <div class="col-lg-6 col-md-8 mx-auto row py-lg-5">
-            <h2 class="fw-light"> <strong>Horoscopo</strong> </h2>
-            <p class="lead text-body-secondary">Seleccione su horoscopo. </p>
-            <div class="containerDOS">
-              <!-- Fila 1 -->
-              <a href="{{Aries}}" class="button-containerDOS">Aries</a>
-              <a href="{{Tauro}}"  class="button-containerDOS">Tauro</a>
-              <a href="{{Geminis}}"  class="button-containerDOS">Géminis</a>
-            
-              <!-- Fila 2 -->
-              <a href="{{Cancer}}"  class="button-containerDOS">Cáncer</a>
-              <a href="{{Leo}}"  class="button-containerDOS">Leo</a>
-              <a href="{{Virgo}}"  class="button-containerDOS">Virgo</a>
-            
-              <!-- Fila 3 -->
-              <a href="{{Piscis}}"  class="button-containerDOS">Piscis</a>
-              <a href="{{Libra}}"  class="button-containerDOS">Libra</a>
-              <a href="{{Escorpio}}"  class="button-containerDOS">Escorpión</a>            
-              <!-- Fila 4 -->
-              <a href="{{Sagitario}}"  class="button-containerDOS">Sagitario</a>
-              <a href="{{Capricornio}}"  class="button-containerDOS">Capricornio</a>
-              <a href="{{Acuario}}"  class="button-containerDOS">Acuario</a>            </div>
-            <p>
-          </div>
-      </section>
+      <div class="text-container">
+        <h5><strong>Cancion recomendada</strong></h5>
+        <p>
+          {{ recomToday.track.name }} <br />{{
+          recomToday.track.artists[0].name
+          }} </p>
+      </div>
+    </div>
+
   </div>
+
+  <section class="arribita pricing-header p-3 pb-md-4 mx-auto text-center">
+    <div class="col-lg-6 col-md-8 mx-auto row py-lg-5">
+      <h2 class="fw-light"> <strong> Como se siente: </strong> </h2>
+      <p class="lead text-body-secondary">Seleccione su mood. </p>
+      <p>
+      <div class="containerUNO">
+        <!-- Fila 1 -->
+        <a href="{{sad}}" class="button-containerUNO">Sad</a>
+        <a href="{{chill}}" class="button-containerUNO">Chill</a>
+        <a href="{{happy}}" class="button-containerUNO">Alegría</a>
+        <!-- Fila 2 -->
+        <a href="{{walk}}" class="button-containerUNO">Caminar</a>
+        <a href="{{gym}}" class="button-containerUNO">Gym</a>
+        <a href="{{clean}}" class="button-containerUNO">Limpiar</a>
+
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-8 mx-auto row py-lg-5">
+      <h2 class="fw-light"> <strong>Horoscopo</strong> </h2>
+      <p class="lead text-body-secondary">Seleccione su horoscopo. </p>
+      <div class="containerDOS">
+        <!-- Fila 1 -->
+        <a href="{{Aries}}" class="button-containerDOS">Aries</a>
+        <a href="{{Tauro}}" class="button-containerDOS">Tauro</a>
+        <a href="{{Geminis}}" class="button-containerDOS">Géminis</a>
+
+        <!-- Fila 2 -->
+        <a href="{{Cancer}}" class="button-containerDOS">Cáncer</a>
+        <a href="{{Leo}}" class="button-containerDOS">Leo</a>
+        <a href="{{Virgo}}" class="button-containerDOS">Virgo</a>
+
+        <!-- Fila 3 -->
+        <a href="{{Piscis}}" class="button-containerDOS">Piscis</a>
+        <a href="{{Libra}}" class="button-containerDOS">Libra</a>
+        <a href="{{Escorpio}}" class="button-containerDOS">Escorpión</a>
+        <!-- Fila 4 -->
+        <a href="{{Sagitario}}" class="button-containerDOS">Sagitario</a>
+        <a href="{{Capricornio}}" class="button-containerDOS">Capricornio</a>
+        <a href="{{Acuario}}" class="button-containerDOS">Acuario</a>
+      </div>
+      <p>
+    </div>
+  </section>
+</div>
 
 <!-- cuadradon de abajo -->
 
@@ -78,17 +82,16 @@
               <div class="card-body">
                 <p class="card-text">
                   {{ rockList[0].track.name }} <br />{{
-                    rockList[0].track.artists[0].name
+                  rockList[0].track.artists[0].name
                   }}
 
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <a href="{{'https://open.spotify.com/track/' + rockList[0].track.id}}"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
+                      class="btn btn-sm btn-outline-secondary">
                       Listen
-                  </a>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -100,17 +103,16 @@
               <div class="card-body">
                 <p class="card-text">
                   {{ rockList[1].track.name }} <br />{{
-                    rockList[1].track.artists[0].name
+                  rockList[1].track.artists[0].name
                   }}
 
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <a href="{{'https://open.spotify.com/track/' + rockList[1].track.id}}"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
+                      class="btn btn-sm btn-outline-secondary">
                       Listen
-                  </a>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -122,16 +124,15 @@
               <div class="card-body">
                 <p class="card-text">
                   {{ rockList[2].track.name }} <br />{{
-                    rockList[2].track.artists[0].name
+                  rockList[2].track.artists[0].name
                   }}
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <a href="{{'https://open.spotify.com/track/' + rockList[2].track.id}}"
-                    class="btn btn-sm btn-outline-secondary"
-                    >
+                      class="btn btn-sm btn-outline-secondary">
                       Listen
-                  </a>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -150,16 +151,15 @@
             <div class="card-body">
               <p class="card-text">
                 {{ popList[0].track.name }} <br />{{
-                  popList[0].track.artists[0].name
+                popList[0].track.artists[0].name
                 }}
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="{{'https://open.spotify.com/track/' + popList[0].track.id}}"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
+                    class="btn btn-sm btn-outline-secondary">
                     Listen
-                </a>
+                  </a>
                 </div>
               </div>
             </div>
@@ -171,16 +171,15 @@
             <div class="card-body">
               <p class="card-text">
                 {{ popList[1].track.name }} <br />{{
-                  popList[1].track.artists[0].name
+                popList[1].track.artists[0].name
                 }}
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="{{'https://open.spotify.com/track/' + popList[1].track.id}}"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
+                    class="btn btn-sm btn-outline-secondary">
                     Listen
-                </a>
+                  </a>
                 </div>
               </div>
             </div>
@@ -192,16 +191,15 @@
             <div class="card-body">
               <p class="card-text">
                 {{ popList[2].track.name }} <br />{{
-                  popList[2].track.artists[0].name
+                popList[2].track.artists[0].name
                 }}
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="{{'https://open.spotify.com/track/' + popList[0].track.id}}"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
+                    class="btn btn-sm btn-outline-secondary">
                     Listen
-                </a>
+                  </a>
                 </div>
               </div>
             </div>
@@ -219,16 +217,15 @@
             <div class="card-body">
               <p class="card-text">
                 {{ hipHopList[0].track.name }} <br />{{
-                  hipHopList[0].track.artists[0].name
+                hipHopList[0].track.artists[0].name
                 }}
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="{{'https://open.spotify.com/track/' + hipHopList[0].track.id}}"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
+                    class="btn btn-sm btn-outline-secondary">
                     Listen
-                </a>
+                  </a>
                 </div>
               </div>
             </div>
@@ -240,16 +237,15 @@
             <div class="card-body">
               <p class="card-text">
                 {{ hipHopList[1].track.name }} <br />{{
-                  hipHopList[1].track.artists[0].name
+                hipHopList[1].track.artists[0].name
                 }}
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="{{'https://open.spotify.com/track/' + hipHopList[1].track.id}}"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
+                    class="btn btn-sm btn-outline-secondary">
                     Listen
-                </a>
+                  </a>
                 </div>
               </div>
             </div>
@@ -261,14 +257,13 @@
             <div class="card-body">
               <p class="card-text">
                 {{ hipHopList[2].track.name }} <br />{{
-                  hipHopList[2].track.artists[0].name
+                hipHopList[2].track.artists[0].name
                 }}
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="{{'https://open.spotify.com/track/' + hipHopList[2].track.id}}"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
+                    class="btn btn-sm btn-outline-secondary">
                     Listen
                   </a>
                 </div>

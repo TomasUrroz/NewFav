@@ -11,8 +11,8 @@ const routes: Routes = [
   {path: "callback", component: HomePageComponent},
   {path: "profile", component: ProfilePageComponent},
   
-  {path: "", redirectTo: 'profile', pathMatch:'full'},
- // {path: "login", component: LoginComponent},
+  {path: "", redirectTo: 'login', pathMatch:'full'},
+  {path: "login", component: LoginComponent},
   {path: "registrar-usuario", component: RegistrarUsuarioComponent},
   {path: "verificar-correo", component: RegistrarUsuarioComponent},
   {path: "recuperar-password", component: RecuperarPasswordComponent},

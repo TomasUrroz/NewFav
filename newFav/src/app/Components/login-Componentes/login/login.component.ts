@@ -32,16 +32,11 @@ export class LoginComponent implements OnInit{
         email: ['', [Validators.required, Validators.email]],
         password: ['', [Validators.required, Validators.minLength(6)]],
       });
-
-     
-      
     }
 
 ngOnInit(): void {
   
 }
-
-
 
     login(){
       const email = this.loginUsuario.value.email;
