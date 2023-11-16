@@ -4,6 +4,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ErrorsService } from 'app/Services/errors.service';
+import { getAuth, 
+  setPersistence, 
+  browserLocalPersistence,
+  onAuthStateChanged } from 'firebase/auth';
+
+
 
 @Component({
   selector: 'app-login',
@@ -15,6 +21,8 @@ export class LoginComponent implements OnInit{
   loginUsuario: FormGroup;
   loading: boolean = false;
 
+  
+  
   constructor(private fb:FormBuilder, 
     private afAuth:AngularFireAuth, 
     private toastr: ToastrService, 
@@ -23,10 +31,17 @@ export class LoginComponent implements OnInit{
       this.loginUsuario = this.fb.group({
         email: ['', [Validators.required, Validators.email]],
         password: ['', [Validators.required, Validators.minLength(6)]],
-      })
+      });
+
+     
+      
     }
 
-    ngOnInit(): void { }
+ngOnInit(): void {
+  
+}
+
+
 
     login(){
       const email = this.loginUsuario.value.email;

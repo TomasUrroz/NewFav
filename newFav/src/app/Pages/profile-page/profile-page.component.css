@@ -174,3 +174,36 @@ h3{
     line-height: 1.5;
   }
   
+ 
+  .img {
+    width: 225px;
+    height: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 150px; /* Ancho fijo para la imagen */
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+  }
+
+
+
+
+
+.card {
+  height: 400px; 
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
