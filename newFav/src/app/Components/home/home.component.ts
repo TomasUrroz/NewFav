@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   hipHopList: any[] = [];
   pis:Track | undefined ;
 
-  xd: string = "https://open.spotify.com/track/" + this.rockList[0].track.id;
+  xd: string = "https://open.spotify.com/track/" + "this.rockList[0].track.id";
 
   constructor(private as: AuthService, private uss: UtilsUserService, private gai: GetApiInfoService) {}
 

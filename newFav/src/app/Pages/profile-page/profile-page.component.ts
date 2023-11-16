@@ -14,9 +14,10 @@ export class ProfilePageComponent implements OnInit {
   rockList: any[] = [];
   popList: any[] = [];
   hipHopList: any[] = [];
-  pis: Track | undefined;
-  xd: string = "https://open.spotify.com/track/" + this.rockList[0].track.id;
-  
+  pis: any | undefined;
+  xd: string = "https://open.spotify.com/track/" + "this.rockList[0].track.id";
+  recomToday: any | undefined;
+
   constructor(private afAuth: AngularFireAuth, private router: Router, private gai:GetApiInfoService) {}
 
   ngOnInit(): void {
@@ -32,6 +33,7 @@ export class ProfilePageComponent implements OnInit {
   }
 
   async popuLists(x: number) {
+    this.recomToday = await this.gai.getTop50();
     for (let i = 0; i < x; i++) {
       this.rockList[i] = await this.gai.getRock();
       this.popList[i] = await this.gai.getPop();
