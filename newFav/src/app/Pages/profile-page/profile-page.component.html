@@ -1,69 +1,73 @@
 <app-nav-bar></app-nav-bar>
 
-<div class="container">
-  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-    <h1 class="display-4 fw-normal"><strong> Bienvenido a New Fav </strong></h1>
-    <p class="fs-5 text-muted">{{ dataUser?.email }}</p>
-    <p class="lead text-body-secondary">
-      <strong
-        >Welcome to New Fav, a cutting-edge social network designed for
-        enthusiasts of all things entertainment. New Fav sets itself apart by
-        initially focusing on the world of music, allowing users to seamlessly
-        share and enjoy their favorite tunes with friends. Our platform provides
-        a dynamic and immersive environment for music lovers to connect,
-        discover, and amplify their passion.</strong
-      >
-    </p>
+    <div class="container">
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal"> <strong> Bienvenido a New Fav </strong> </h1>
+        <p class="fs-5 text-muted">{{ dataUser?.email }}</p>
+        <p class="lead text-body-secondary"><strong>Welcome to New Fav, a cutting-edge social network designed for enthusiasts of all things entertainment. New Fav sets itself apart by initially focusing on the world of music, allowing users to seamlessly share and enjoy their favorite tunes with friends. Our platform provides a dynamic and immersive environment for music lovers to connect, discover, and amplify their passion.</strong> </p>
+        <div class="cancionRecomendada">
+          <div class="image-container">
+            <img src="../../../assets/img/mountain.jpg" alt="Imagen">
+          </div>
+          <div class="text-container">
+            <h5><strong>Cancion recomendada</strong></h5>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, odio id sagittis consectetur, ex mi aliquam lectus, ut euismod justo mi eget justo.
+            </p>
+          </div>
+        </div>
+         
+      </div>
+      
+      <section class="arribita pricing-header p-3 pb-md-4 mx-auto text-center">
+          <div class="col-lg-6 col-md-8 mx-auto row py-lg-5">
+            <h2 class="fw-light"> <strong> Como se siente: </strong> </h2>
+            <p class="lead text-body-secondary">Seleccione su mood. </p>
+            <p>
+              <div class="containerUNO">
+                <!-- Fila 1 -->
+                <div class="button-containerUNO">Sad</div>
+                <div class="button-containerUNO">Chill</div>
+                <div class="button-containerUNO">Alegría</div>
+                <!-- Fila 2 -->
+                <div class="button-containerUNO">Caminar</div>
+                <div class="button-containerUNO">Gym</div>
+                <div class="button-containerUNO">Limpiar</div>
+                <!-- Fila 3 -->
+                <div class="button-containerUNO">Nostalgia</div>
+                <div class="button-containerUNO">Otros</div>
+                <div class="button-containerUNO">Otros</div>
+              
+              </div>
+          </div>
+          <div class="col-lg-6 col-md-8 mx-auto row py-lg-5">
+            <h2 class="fw-light"> <strong>Horoscopo</strong> </h2>
+            <p class="lead text-body-secondary">Seleccione su horoscopo. </p>
+            <div class="containerDOS">
+              <!-- Fila 1 -->
+              <div class="button-containerDOS">Aries</div>
+              <div class="button-containerDOS">Tauro</div>
+              <div class="button-containerDOS">Géminis</div>
+            
+              <!-- Fila 2 -->
+              <div class="button-containerDOS">Cáncer</div>
+              <div class="button-containerDOS">Leo</div>
+              <div class="button-containerDOS">Virgo</div>
+            
+              <!-- Fila 3 -->
+              <div class="button-containerDOS">Piscis</div>
+              <div class="button-containerDOS">Libra</div>
+              <div class="button-containerDOS">Escorpión</div>
+            
+              <!-- Fila 4 -->
+              <div class="button-containerDOS">Sagitario</div>
+              <div class="button-containerDOS">Capricornio</div>
+              <div class="button-containerDOS">Acuario</div>
+            </div>
+            <p>
+          </div>
+      </section>
   </div>
-
-  <section class="arribita pricing-header p-3 pb-md-4 mx-auto text-center">
-    <div class="col-lg-6 col-md-8 mx-auto row py-lg-5">
-      <h2 class="fw-light"><strong> Como se siente: </strong></h2>
-      <p class="lead text-body-secondary">Seleccione su mood.</p>
-      <p></p>
-      <div class="containerUNO">
-        <!-- Fila 1 -->
-        <div class="button-containerUNO">Sad</div>
-        <div class="button-containerUNO">Chill</div>
-        <div class="button-containerUNO">Alegría</div>
-        <!-- Fila 2 -->
-        <div class="button-containerUNO">Caminar</div>
-        <div class="button-containerUNO">Gym</div>
-        <div class="button-containerUNO">Limpiar</div>
-        <!-- Fila 3 -->
-        <div class="button-containerUNO">Nostalgia</div>
-        <div class="button-containerUNO">Otros</div>
-        <div class="button-containerUNO">Otros</div>
-      </div>
-    </div>
-    <div class="col-lg-6 col-md-8 mx-auto row py-lg-5">
-      <h2 class="fw-light"><strong>Horoscopo</strong></h2>
-      <p class="lead text-body-secondary">Seleccione su horoscopo.</p>
-      <div class="containerDOS">
-        <!-- Fila 1 -->
-        <div class="button-containerDOS">Aries</div>
-        <div class="button-containerDOS">Tauro</div>
-        <div class="button-containerDOS">Géminis</div>
-
-        <!-- Fila 2 -->
-        <div class="button-containerDOS">Cáncer</div>
-        <div class="button-containerDOS">Leo</div>
-        <div class="button-containerDOS">Virgo</div>
-
-        <!-- Fila 3 -->
-        <div class="button-containerDOS">Piscis</div>
-        <div class="button-containerDOS">Libra</div>
-        <div class="button-containerDOS">Escorpión</div>
-
-        <!-- Fila 4 -->
-        <div class="button-containerDOS">Sagitario</div>
-        <div class="button-containerDOS">Capricornio</div>
-        <div class="button-containerDOS">Acuario</div>
-      </div>
-      <p></p>
-    </div>
-  </section>
-</div>
 
 <!-- cuadradon de abajo -->
 
