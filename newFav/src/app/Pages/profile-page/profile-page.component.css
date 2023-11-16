@@ -96,6 +96,7 @@ h3{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 10px;
+
   }
 
   .button-containerDOS {
@@ -109,7 +110,8 @@ h3{
     border-radius: 10px;
     width: 90px;
     height: 40px;
-    
+    text-decoration: none;
+    color: #ffffff;
   }
 
   .containerUNO {
@@ -134,6 +136,7 @@ h3{
     border-radius: 10px;
     transition: background-color 0.3s ease;
     
+    text-decoration: none;
   }
 
   .button-containerUNO:hover {
@@ -174,36 +177,3 @@ h3{
     line-height: 1.5;
   }
   
- 
-  .img {
-    width: 225px;
-    height: 225px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 0 0 150px; /* Ancho fijo para la imagen */
-    margin: auto;
-    margin-top: 25px;
-    border-radius: 8px; /* Bordes redondeados para la imagen */
-  }
-
-
-
-
-
-.card {
-  height: 400px; 
-}
-
-.card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.btn-group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}

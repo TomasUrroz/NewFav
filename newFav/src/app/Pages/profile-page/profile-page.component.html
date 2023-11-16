@@ -27,17 +27,13 @@
             <p>
               <div class="containerUNO">
                 <!-- Fila 1 -->
-                <div class="button-containerUNO">Sad</div>
-                <div class="button-containerUNO">Chill</div>
-                <div class="button-containerUNO">Alegría</div>
+                <a href="{{sad}}"  class="button-containerUNO">Sad</a>
+                <a href="{{chill}}"  class="button-containerUNO">Chill</a>
+                <a href="{{happy}}"  class="button-containerUNO">Alegría</a>
                 <!-- Fila 2 -->
-                <div class="button-containerUNO">Caminar</div>
-                <div class="button-containerUNO">Gym</div>
-                <div class="button-containerUNO">Limpiar</div>
-                <!-- Fila 3 -->
-                <div class="button-containerUNO">Nostalgia</div>
-                <div class="button-containerUNO">Otros</div>
-                <div class="button-containerUNO">Otros</div>
+                <a href="{{walk}}"  class="button-containerUNO">Caminar</a>
+                <a href="{{gym}}"  class="button-containerUNO">Gym</a>
+                <a href="{{clean}}"  class="button-containerUNO">Limpiar</a>
               
               </div>
           </div>
@@ -46,24 +42,24 @@
             <p class="lead text-body-secondary">Seleccione su horoscopo. </p>
             <div class="containerDOS">
               <!-- Fila 1 -->
-              <div class="button-containerDOS">Aries</div>
-              <div class="button-containerDOS">Tauro</div>
-              <div class="button-containerDOS">Géminis</div>
+              <a href="{{Aries}}" class="button-containerDOS">Aries</a>
+              <a href="{{Tauro}}"  class="button-containerDOS">Tauro</a>
+              <a href="{{Geminis}}"  class="button-containerDOS">Géminis</a>
             
               <!-- Fila 2 -->
-              <div class="button-containerDOS">Cáncer</div>
-              <div class="button-containerDOS">Leo</div>
-              <div class="button-containerDOS">Virgo</div>
+              <a href="{{Cancer}}"  class="button-containerDOS">Cáncer</a>
+              <a href="{{Leo}}"  class="button-containerDOS">Leo</a>
+              <a href="{{Virgo}}"  class="button-containerDOS">Virgo</a>
             
               <!-- Fila 3 -->
-              <div class="button-containerDOS">Piscis</div>
-              <div class="button-containerDOS">Libra</div>
-              <div class="button-containerDOS">Escorpión</div>
+              <a href="{{Piscis}}"  class="button-containerDOS">Piscis</a>
+              <a href="{{Libra}}"  class="button-containerDOS">Libra</a>
+              <a href="{{Escorpio}}"  class="button-containerDOS">Escorpión</a>
             
               <!-- Fila 4 -->
-              <div class="button-containerDOS">Sagitario</div>
-              <div class="button-containerDOS">Capricornio</div>
-              <div class="button-containerDOS">Acuario</div>
+              <a href="{{Sagitario}}"  class="button-containerDOS">Sagitario</a>
+              <a href="{{Capricornio}}"  class="button-containerDOS">Capricornio</a>
+              <a href="{{Acuario}}"  class="button-containerDOS">Acuario</a>
             </div>
             <p>
           </div>
@@ -90,12 +86,11 @@
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button
-                      type="button"
+                    <a href="{{'https://open.spotify.com/track/' + rockList[0].track.id}}"
                       class="btn btn-sm btn-outline-secondary"
                     >
                       Listen
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -113,12 +108,11 @@
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button
-                      type="button"
+                    <a href="{{'https://open.spotify.com/track/' + rockList[1].track.id}}"
                       class="btn btn-sm btn-outline-secondary"
                     >
                       Listen
-                    </button>
+                  </a>
                   </div>
                 </div>
               </div>
@@ -129,18 +123,17 @@
               <img class="img" src="{{rockList[2].track.album.images[1].url}}" />
               <div class="card-body">
                 <p class="card-text">
-                  {{ rockList[1].track.name }} <br />{{
-                    rockList[1].track.artists[0].name
+                  {{ rockList[2].track.name }} <br />{{
+                    rockList[2].track.artists[0].name
                   }}
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button
-                      type="button"
+                    <a href="{{'https://open.spotify.com/track/' + rockList[2].track.id}}"
                       class="btn btn-sm btn-outline-secondary"
                     >
                       Listen
-                    </button>
+                  </a>
                   </div>
                 </div>
               </div>
@@ -164,12 +157,11 @@
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
+                  <a href="{{'https://open.spotify.com/track/' + popList[0].track.id}}"
+                  class="btn btn-sm btn-outline-secondary"
                   >
                     Listen
-                  </button>
+                </a>
                 </div>
               </div>
             </div>
@@ -186,12 +178,11 @@
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button
-                    type="button"
+                  <a href="{{'https://open.spotify.com/track/' + popList[1].track.id}}"
                     class="btn btn-sm btn-outline-secondary"
                   >
                     Listen
-                  </button>
+                </a>
                 </div>
               </div>
             </div>
@@ -208,12 +199,11 @@
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button
-                    type="button"
+                  <a href="{{'https://open.spotify.com/track/' + popList[2].track.id}}"
                     class="btn btn-sm btn-outline-secondary"
                   >
                     Listen
-                  </button>
+                </a>
                 </div>
               </div>
             </div>
@@ -236,12 +226,11 @@
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button
-                    type="button"
+                  <a href="{{'https://open.spotify.com/track/' + hipHopList[0].track.id}}"
                     class="btn btn-sm btn-outline-secondary"
                   >
                     Listen
-                  </button>
+                </a>
                 </div>
               </div>
             </div>
@@ -258,12 +247,11 @@
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button
-                    type="button"
+                  <a href="{{'https://open.spotify.com/track/' + hipHopList[1].track.id}}"
                     class="btn btn-sm btn-outline-secondary"
                   >
                     Listen
-                  </button>
+                </a>
                 </div>
               </div>
             </div>
@@ -280,12 +268,11 @@
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button
-                    type="button"
+                  <a href="{{'https://open.spotify.com/track/' + hipHopList[2].track.id}}"
                     class="btn btn-sm btn-outline-secondary"
                   >
                     Listen
-                  </button>
+                </a>
                 </div>
               </div>
             </div>
@@ -293,5 +280,5 @@
         </div>
       </div>
     </div>
-  </div>
- </section>
+  </div>*
+ --></section>
