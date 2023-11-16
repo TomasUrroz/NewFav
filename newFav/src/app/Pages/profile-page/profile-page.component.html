@@ -27,13 +27,17 @@
             <p>
               <div class="containerUNO">
                 <!-- Fila 1 -->
-                <a href="{{sad}}"  class="button-containerUNO">Sad</a>
-                <a href="{{chill}}"  class="button-containerUNO">Chill</a>
-                <a href="{{happy}}"  class="button-containerUNO">Alegría</a>
+                <div class="button-containerUNO">Sad</div>
+                <div class="button-containerUNO">Chill</div>
+                <div class="button-containerUNO">Alegría</div>
                 <!-- Fila 2 -->
-                <a href="{{walk}}"  class="button-containerUNO">Caminar</a>
-                <a href="{{gym}}"  class="button-containerUNO">Gym</a>
-                <a href="{{clean}}"  class="button-containerUNO">Limpiar</a>
+                <div class="button-containerUNO">Caminar</div>
+                <div class="button-containerUNO">Gym</div>
+                <div class="button-containerUNO">Limpiar</div>
+                <!-- Fila 3 -->
+                <div class="button-containerUNO">Nostalgia</div>
+                <div class="button-containerUNO">Otros</div>
+                <div class="button-containerUNO">Otros</div>
               
               </div>
           </div>
@@ -42,24 +46,24 @@
             <p class="lead text-body-secondary">Seleccione su horoscopo. </p>
             <div class="containerDOS">
               <!-- Fila 1 -->
-              <a href="{{Aries}}" class="button-containerDOS">Aries</a>
-              <a href="{{Tauro}}"  class="button-containerDOS">Tauro</a>
-              <a href="{{Geminis}}"  class="button-containerDOS">Géminis</a>
+              <div class="button-containerDOS">Aries</div>
+              <div class="button-containerDOS">Tauro</div>
+              <div class="button-containerDOS">Géminis</div>
             
               <!-- Fila 2 -->
-              <a href="{{Cancer}}"  class="button-containerDOS">Cáncer</a>
-              <a href="{{Leo}}"  class="button-containerDOS">Leo</a>
-              <a href="{{Virgo}}"  class="button-containerDOS">Virgo</a>
+              <div class="button-containerDOS">Cáncer</div>
+              <div class="button-containerDOS">Leo</div>
+              <div class="button-containerDOS">Virgo</div>
             
               <!-- Fila 3 -->
-              <a href="{{Piscis}}"  class="button-containerDOS">Piscis</a>
-              <a href="{{Libra}}"  class="button-containerDOS">Libra</a>
-              <a href="{{Escorpio}}"  class="button-containerDOS">Escorpión</a>
+              <div class="button-containerDOS">Piscis</div>
+              <div class="button-containerDOS">Libra</div>
+              <div class="button-containerDOS">Escorpión</div>
             
               <!-- Fila 4 -->
-              <a href="{{Sagitario}}"  class="button-containerDOS">Sagitario</a>
-              <a href="{{Capricornio}}"  class="button-containerDOS">Capricornio</a>
-              <a href="{{Acuario}}"  class="button-containerDOS">Acuario</a>
+              <div class="button-containerDOS">Sagitario</div>
+              <div class="button-containerDOS">Capricornio</div>
+              <div class="button-containerDOS">Acuario</div>
             </div>
             <p>
           </div>
@@ -86,11 +90,12 @@
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a href="{{'https://open.spotify.com/track/' + rockList[0].track.id}}"
+                    <button
+                      type="button"
                       class="btn btn-sm btn-outline-secondary"
                     >
                       Listen
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -108,11 +113,12 @@
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a href="{{'https://open.spotify.com/track/' + rockList[1].track.id}}"
+                    <button
+                      type="button"
                       class="btn btn-sm btn-outline-secondary"
                     >
                       Listen
-                  </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -129,11 +135,12 @@
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a href="{{'https://open.spotify.com/track/' + rockList[2].track.id}}"
+                    <button
+                      type="button"
                       class="btn btn-sm btn-outline-secondary"
                     >
                       Listen
-                  </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -157,11 +164,12 @@
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="{{'https://open.spotify.com/track/' + popList[0].track.id}}"
-                  class="btn btn-sm btn-outline-secondary"
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
                   >
                     Listen
-                </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -178,11 +186,12 @@
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="{{'https://open.spotify.com/track/' + popList[1].track.id}}"
+                  <button
+                    type="button"
                     class="btn btn-sm btn-outline-secondary"
                   >
                     Listen
-                </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -199,11 +208,12 @@
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="{{'https://open.spotify.com/track/' + popList[2].track.id}}"
+                  <button
+                    type="button"
                     class="btn btn-sm btn-outline-secondary"
                   >
                     Listen
-                </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -226,11 +236,12 @@
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="{{'https://open.spotify.com/track/' + hipHopList[0].track.id}}"
+                  <button
+                    type="button"
                     class="btn btn-sm btn-outline-secondary"
                   >
                     Listen
-                </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -247,11 +258,12 @@
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="{{'https://open.spotify.com/track/' + hipHopList[1].track.id}}"
+                  <button
+                    type="button"
                     class="btn btn-sm btn-outline-secondary"
                   >
                     Listen
-                </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -268,11 +280,12 @@
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="{{'https://open.spotify.com/track/' + hipHopList[2].track.id}}"
+                  <button
+                    type="button"
                     class="btn btn-sm btn-outline-secondary"
                   >
                     Listen
-                </a>
+                  </button>
                 </div>
               </div>
             </div>
