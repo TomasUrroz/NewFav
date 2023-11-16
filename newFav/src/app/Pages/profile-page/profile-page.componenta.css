@@ -177,6 +177,24 @@ h3{
     line-height: 1.5;
   }
   
-  .img{
-    margin-top: 1.7rem;
+  .card {
+    height: 400px; /* Tamaño fijo para el cuadrado (ajusta según tus necesidades) */
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .img {
+    height:  225px;
+    width: 225px;
+    border-radius: 8px;
   }

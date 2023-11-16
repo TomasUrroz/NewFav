@@ -7,7 +7,8 @@ import { ErrorsService } from 'app/Services/errors.service';
 import { getAuth, 
   setPersistence, 
   browserLocalPersistence,
-  onAuthStateChanged } from 'firebase/auth';
+  onAuthStateChanged, 
+  browserSessionPersistence} from 'firebase/auth';
 
 
 
@@ -37,29 +38,50 @@ export class LoginComponent implements OnInit{
       
     }
 
-ngOnInit(): void {
+    ngOnInit(): void {
+      this.configureFirebasePersistenceAndCheckAuthState();
+    }
   
-}
-
-
-
-    login(){
+    async configureFirebasePersistenceAndCheckAuthState() {
+      const auth = getAuth();
+  
+      try {
+        await setPersistence(auth, browserSessionPersistence);
+        console.log('Firebase session persistence set successfully');
+        this.checkAuthState();
+      } catch (error) {
+        console.error('Error setting Firebase session persistence:', error);
+      }
+    }
+  
+    checkAuthState() {
+      this.afAuth.authState.subscribe((user) => {
+        if (user) {
+          if (user.emailVerified) {
+            this.router.navigate(['/profile']);
+          } else {
+            this.router.navigate(['/verificar-correo']);
+          }
+        } else {
+          // Usuario no autenticado, puedes manejarlo de acuerdo a tus necesidades
+        }
+      });
+    }
+  
+    login() {
       const email = this.loginUsuario.value.email;
       const password = this.loginUsuario.value.password;
-      
+  
       this.loading = true;
-      //console.log(email,password);
-      this.afAuth.signInWithEmailAndPassword(email,password).then((user) => {
-        if(user.user?.emailVerified){
-          this.router.navigate(['/profile']);
-        }else{
-          this.router.navigate(['/verificar-correo']);
-        }
-      }).catch((error) => {
-        this.loading = false;
-        this.toastr.error(this.fbErrors.codeError(error.code),'Error');
-        console.log(error);
-      })
+  
+      this.afAuth.signInWithEmailAndPassword(email, password)
+        .then(() => {
+        })
+        .catch((error) => {
+          this.loading = false;
+          this.toastr.error(this.fbErrors.codeError(error.code), 'Error');
+          console.log(error);
+        });
     }
 
 }
