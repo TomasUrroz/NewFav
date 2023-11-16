@@ -1,3 +1,4 @@
+import { ExternalUrls } from './../../Interfaces/interfaces';
 import { Component, OnInit } from '@angular/core';
 import { Track } from 'app/Interfaces/interfaces';
 import { AuthService } from 'app/Services/auth.service';
@@ -15,6 +16,8 @@ export class HomeComponent implements OnInit {
   popList: any[] = [];
   hipHopList: any[] = [];
   pis:Track | undefined ;
+
+  xd: string = "https://open.spotify.com/track/" + this.rockList[0].track.id;
 
   constructor(private as: AuthService, private uss: UtilsUserService, private gai: GetApiInfoService) {}
 

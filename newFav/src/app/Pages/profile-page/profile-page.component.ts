@@ -15,7 +15,8 @@ export class ProfilePageComponent implements OnInit {
   popList: any[] = [];
   hipHopList: any[] = [];
   pis: Track | undefined;
-
+  xd: string = "https://open.spotify.com/track/" + this.rockList[0].track.id;
+  
   constructor(private afAuth: AngularFireAuth, private router: Router, private gai:GetApiInfoService) {}
 
   ngOnInit(): void {
