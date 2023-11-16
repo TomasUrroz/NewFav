@@ -150,8 +150,7 @@ h3{
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    margin: 20px;
-    margin-right: 20px;
+    margin: 20px auto;
     max-width: 600px; 
   }
 
