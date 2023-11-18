@@ -47,8 +47,8 @@ import { DisplaySongComponent } from './Components/Shared/display-song/display-s
     AppRoutingModule, 
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot(), // ToastrModule added
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(), 
   ],
   providers: [],
   bootstrap: [AppComponent]

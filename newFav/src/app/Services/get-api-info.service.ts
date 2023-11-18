@@ -296,7 +296,7 @@ export class GetApiInfoService {
         }
       );
       const data = await result.json();
-      return data.tracks.items[Math.floor(Math.random() * 50)].track.id;
+      return data.id;
     } catch (error) {
       console.log(error);
     }
@@ -313,7 +313,7 @@ export class GetApiInfoService {
         }
       );
       const data = await result.json();
-      return data.tracks.items[Math.floor(Math.random() * 50)].track.id;
+      return data.id;
     } catch (error) {
       console.log(error);
     }
@@ -330,7 +330,7 @@ export class GetApiInfoService {
         }
       );
       const data = await result.json();
-      return data.tracks.items[Math.floor(Math.random() * 50)].track.id;
+      return data.id;
     } catch (error) {
       console.log(error);
     }
@@ -347,7 +347,7 @@ export class GetApiInfoService {
         }
       );
       const data = await result.json();
-      return data.tracks.items[Math.floor(Math.random() * 50)].track.id;
+      return data.id;
     } catch (error) {
       console.log(error);
     }
@@ -364,7 +364,7 @@ export class GetApiInfoService {
         }
       );
       const data = await result.json();
-      return data.tracks.items[Math.floor(Math.random() * 50)].track.id;
+      return data.id;
     } catch (error) {
       console.log(error);
     }
@@ -381,7 +381,7 @@ export class GetApiInfoService {
         }
       );
       const data = await result.json();
-      return data.tracks.items[Math.floor(Math.random() * 50)].track.id;
+      return data.id;
     } catch (error) {
       console.log(error);
     }

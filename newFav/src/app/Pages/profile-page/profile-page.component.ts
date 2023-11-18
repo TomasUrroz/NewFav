@@ -15,7 +15,8 @@ export class ProfilePageComponent implements OnInit {
   popList: any[] = [];
   hipHopList: any[] = [];
   pis: any | undefined;
-  xd: string = "https://open.spotify.com/track/" + "this.rockList[0].track.id";
+  url: string = "https://open.spotify.com/track/";
+  urlPlay: string = "https://open.spotify.com/playlist/";
   recomToday: any | undefined;
   Aries: string = '';
   Tauro: string = '';
@@ -66,30 +67,30 @@ export class ProfilePageComponent implements OnInit {
   }
   async popuHoros() {
     try {
-      this.Aries = 'https://open.spotify.com/track/' + await this.gai.getAries();
-      this.Tauro= 'https://open.spotify.com/track/' +await this.gai.getTau();
-      this.Geminis= 'https://open.spotify.com/track/' +await this.gai.getGem();
-      this.Cancer= 'https://open.spotify.com/track/' +await this.gai.getCancer();
-      this.Leo= 'https://open.spotify.com/track/' +await this.gai.getLeo();
-      this.Virgo= 'https://open.spotify.com/track/' +await this.gai.getVirg();
-      this.Libra= 'https://open.spotify.com/track/' +await this.gai.getLib();
-      this.Escorpio= 'https://open.spotify.com/track/' +await this.gai.getScorpio();
-      this.Sagitario='https://open.spotify.com/track/' + await this.gai.getSagit();
-      this.Capricornio= 'https://open.spotify.com/track/' +await this.gai.getCapri();
-      this.Acuario= 'https://open.spotify.com/track/' +await this.gai.getAqu();
-      this.Piscis= 'https://open.spotify.com/track/' +await this.gai.getPis();
+      this.Aries = this.url + await this.gai.getAries();
+      this.Tauro= this.url +await this.gai.getTau();
+      this.Geminis= this.url +await this.gai.getGem();
+      this.Cancer= this.url +await this.gai.getCancer();
+      this.Leo= this.url +await this.gai.getLeo();
+      this.Virgo= this.url +await this.gai.getVirg();
+      this.Libra= this.url +await this.gai.getLib();
+      this.Escorpio= this.url +await this.gai.getScorpio();
+      this.Sagitario=this.url + await this.gai.getSagit();
+      this.Capricornio= this.url +await this.gai.getCapri();
+      this.Acuario= this.url +await this.gai.getAqu();
+      this.Piscis= this.url +await this.gai.getPis();
     } catch (error) {
       console.log(error);
     }
   }
   async popuMood(){
     try {
-      this.sad = 'https://open.spotify.com/track/' +await this.gai.getSad();
-      this.chill= 'https://open.spotify.com/track/' +await this.gai.getChill();
-      this.happy = 'https://open.spotify.com/track/' +await this.gai.getHappy();
-      this.walk = 'https://open.spotify.com/track/' +await this.gai.getWalk();
-      this.gym = 'https://open.spotify.com/track/' +await this.gai.getGym();
-      this.clean = 'https://open.spotify.com/track/' + await this.gai.getClean();
+      this.sad = this.urlPlay + await this.gai.getSad();
+      this.chill= this.urlPlay+await this.gai.getChill();
+      this.happy = this.urlPlay +await this.gai.getHappy();
+      this.walk = this.urlPlay+await this.gai.getWalk();
+      this.gym = this.urlPlay +await this.gai.getGym();
+      this.clean = this.urlPlay + await this.gai.getClean();
     } catch (error) {
       console.log(error);
     }
