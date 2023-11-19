@@ -15,7 +15,6 @@ import { ProfileComponent } from './Components/profile/profile.component';
 import { NavBarComponent } from './Components/Shared/nav-bar/nav-bar.component';
 import { FooterComponent } from './Components/Shared/footer/footer.component';
 import { HomePageComponent } from './Pages/home-page/home-page.component';
-import { ProfilePageComponent } from './Pages/profile-page/profile-page.component';
 import { LoginComponent } from './Components/login-Componentes/login/login.component';
 import { RegistrarUsuarioComponent } from './Components/login-Componentes/registrar-usuario/registrar-usuario.component';
 import { RecuperarPasswordComponent } from './Components/login-Componentes/recuperar-password/recuperar-password.component';
@@ -23,6 +22,8 @@ import { VerificarCorreoComponent } from './Components/login-Componentes/verific
 import { SpinnerComponent } from './Components/Shared/spinner/spinner.component';
 import { environment } from 'environments/environments';
 import { DisplaySongComponent } from './Components/Shared/display-song/display-song.component';
+import { AboutPagesComponent } from './Pages/about-pages/about-pages.component';
+import { FeaturesPageComponent } from './Pages/features-page/features-page.component';
 
 
 
@@ -34,13 +35,14 @@ import { DisplaySongComponent } from './Components/Shared/display-song/display-s
     NavBarComponent,
     FooterComponent,
     HomePageComponent,
-    ProfilePageComponent,
     LoginComponent,
     RegistrarUsuarioComponent,
     RecuperarPasswordComponent,
     VerificarCorreoComponent,
     SpinnerComponent,
     DisplaySongComponent,
+    AboutPagesComponent,
+    FeaturesPageComponent,
   ],
   imports: [
     BrowserModule,

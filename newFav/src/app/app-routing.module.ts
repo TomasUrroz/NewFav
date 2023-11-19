@@ -1,18 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './Pages/home-page/home-page.component';
-import { ProfilePageComponent } from './Pages/profile-page/profile-page.component';
 import { LoginComponent } from './Components/login-Componentes/login/login.component';
 import { RegistrarUsuarioComponent } from './Components/login-Componentes/registrar-usuario/registrar-usuario.component';
 import { RecuperarPasswordComponent } from './Components/login-Componentes/recuperar-password/recuperar-password.component';
+import { ProfileComponent } from './Components/profile/profile.component';
+import { AboutPagesComponent } from './Pages/about-pages/about-pages.component';
+import { FeaturesPageComponent } from './Pages/features-page/features-page.component';
 
 const routes: Routes = [
   {path: "home", component: HomePageComponent},
   {path: "callback", component: HomePageComponent},
-  {path: "profile", component: ProfilePageComponent},
+  {path: "profile", component: ProfileComponent},
+  {path: "about", component: AboutPagesComponent},
+  {path: "features", component: FeaturesPageComponent},
   
-  {path: "", redirectTo: 'login', pathMatch:'full'},
-  {path: "login", component: LoginComponent},
+  {path: "", redirectTo: 'profile', pathMatch:'full'}, //cambiar 'profile' por 'login'
+ // {path: "login", component: LoginComponent},
   {path: "registrar-usuario", component: RegistrarUsuarioComponent},
   {path: "verificar-correo", component: RegistrarUsuarioComponent},
   {path: "recuperar-password", component: RecuperarPasswordComponent},
