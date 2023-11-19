@@ -1,6 +1,16 @@
 # NewFav
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
+# Welcome to NewFav
+Thank you for selecting our application. Here, we furnish you with essential details to evaluate the login functionality designed for both administrators and regular users. Prior registration is required to access the login feature.
+
+## Build
+
+If you wish to use our app login as a regular user:
+
+Email: insertYourEmail@gmail.com
+Password: createAPassword
+Thank you for trying out our application! If you have any questions or encounter any issues, feel free to reach out to our support team.
 
 ## Development server
 
