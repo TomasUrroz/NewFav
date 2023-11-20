@@ -4,10 +4,15 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ErrorsService } from 'app/Services/errors.service';
-import { getAuth, 
+import { Auth,
+  getAuth, 
   setPersistence, 
   browserLocalPersistence,
-  onAuthStateChanged } from 'firebase/auth';
+  onAuthStateChanged,
+  browserSessionPersistence,
+  inMemoryPersistence,
+  UserCredential } from 'firebase/auth';
+  import { AuthService } from 'app/Services/auth.service'; // Asegúrate de importar correctamente el servicio
 
 
 
@@ -25,6 +30,7 @@ export class LoginComponent implements OnInit{
   
   constructor(private fb:FormBuilder, 
     private afAuth:AngularFireAuth, 
+    private authService: AuthService,
     private toastr: ToastrService, 
     private router: Router,
     private fbErrors: ErrorsService){
@@ -38,23 +44,55 @@ ngOnInit(): void {
   
 }
 
-    login(){
-      const email = this.loginUsuario.value.email;
-      const password = this.loginUsuario.value.password;
+     login(){
+       const email = this.loginUsuario.value.email;
+       const password = this.loginUsuario.value.password;
       
-      this.loading = true;
-      //console.log(email,password);
-      this.afAuth.signInWithEmailAndPassword(email,password).then((user) => {
-        if(user.user?.emailVerified){
-          this.router.navigate(['/profile']);
-        }else{
-          this.router.navigate(['/verificar-correo']);
-        }
-      }).catch((error) => {
-        this.loading = false;
-        this.toastr.error(this.fbErrors.codeError(error.code),'Error');
-        console.log(error);
-      })
-    }
+       this.loading = true;
+       //console.log(email,password);
+       this.afAuth.signInWithEmailAndPassword(email,password).then((user) => {
+         if(user.user?.emailVerified){
+           this.router.navigate(['/profile']);
+         }else{
+           this.router.navigate(['/verificar-correo']);
+         }
+       }).catch((error) => {
+         this.loading = false;
+         this.toastr.error(this.fbErrors.codeError(error.code),'Error');
+         console.log(error);
+       })
+     }
+
+
+
+    // loginWithPersistence() {
+    //   const email = this.loginUsuario.value.email;
+    //   const password = this.loginUsuario.value.password;
+  
+    //   this.loading = true;
+  
+    //   this.authService.loginWithPersistence(email, password)
+    //     .then((user) => {
+    //       this.handleAuthentication(user);
+    //     })
+    //     .catch((error) => {
+    //       this.handleAuthenticationError(error);
+    //     });
+    // }
+  
+    // private handleAuthentication(user: any) {
+    //   if (user.user?.emailVerified) {
+    //     this.router.navigate(['/profile']);
+    //   } else {
+    //     this.router.navigate(['/verificar-correo']);
+    //   }
+    // }
+  
+    // private handleAuthenticationError(error: any) {
+    //   this.loading = false;
+    //   this.toastr.error(this.fbErrors.codeError(error.code), 'Error');
+    //   console.log(error);
+    // }
+
 
 }

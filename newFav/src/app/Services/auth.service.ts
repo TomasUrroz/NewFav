@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
 
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { getAuth, UserCredential, setPersistence, browserLocalPersistence, signInWithEmailAndPassword } from 'firebase/auth';
+
+
 @Injectable({
   providedIn: 'root',
 })
@@ -9,6 +13,14 @@ export class AuthService {
   params: any = new URLSearchParams(window.location.search);
   code: any = this.params.get('code');
 
-  constructor() {}
+ // private auth = getAuth();
+
+  constructor(private afAuth: AngularFireAuth) {}
+
+  // loginWithPersistence(email: string, password: string): Promise<UserCredential> {
+  //   return setPersistence(this.auth, browserLocalPersistence).then(() =>
+  //     signInWithEmailAndPassword(this.auth, email, password)
+  //   );
+  // }
 
 }
