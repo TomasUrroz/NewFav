@@ -15,8 +15,8 @@ const routes: Routes = [
   {path: "about", component: AboutPagesComponent},
   {path: "features", component: FeaturesPageComponent},
   
-  {path: "", redirectTo: 'profile', pathMatch:'full'}, //cambiar 'profile' por 'login'
-  //{path: "login", component: LoginComponent},
+  {path: "", redirectTo: 'login', pathMatch:'full'}, 
+  {path: "login", component: LoginComponent},
   {path: "registrar-usuario", component: RegistrarUsuarioComponent},
   {path: "verificar-correo", component: RegistrarUsuarioComponent},
   {path: "recuperar-password", component: RecuperarPasswordComponent},
