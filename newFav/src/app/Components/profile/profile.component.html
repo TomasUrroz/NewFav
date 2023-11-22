@@ -18,7 +18,7 @@
           {{ recomToday.track.name }} <br />{{
           recomToday.track.artists[0].name
           }} </p>
-        <a href="{{'https://open.spotify.com/track/' + recomToday.track.id}}" class="button-recomendada">Listen</a>
+        <a href="{{'https://open.spotify.com/track/' + recomToday.track.id}}" target=”_blank” class="button-recomendada">Listen</a>
       </div>
     </div>
 
@@ -31,13 +31,13 @@
       <p>
       <div class="containerUNO">
         <!-- Fila 1 -->
-        <a href="{{sad}}" class="button-containerUNO">Sad</a>
-        <a href="{{chill}}" class="button-containerUNO">Chill</a>
-        <a href="{{happy}}" class="button-containerUNO">Alegría</a>
+        <a href="{{sad}}" target=”_blank” class="button-containerUNO">Sad</a>
+        <a href="{{chill}}" target=”_blank” class="button-containerUNO">Chill</a>
+        <a href="{{happy}}" target=”_blank” class="button-containerUNO">Alegría</a>
         <!-- Fila 2 -->
-        <a href="{{walk}}" class="button-containerUNO">Caminar</a>
-        <a href="{{gym}}" class="button-containerUNO">Gym</a>
-        <a href="{{clean}}" class="button-containerUNO">Limpiar</a>
+        <a href="{{walk}}" target=”_blank” class="button-containerUNO">Caminar</a>
+        <a href="{{gym}}" target=”_blank” class="button-containerUNO">Gym</a>
+        <a href="{{clean}}" target=”_blank” class="button-containerUNO">Limpiar</a>
 
       </div>
     </div>
@@ -46,23 +46,23 @@
       <p class="lead text-body-secondary">Seleccione su horoscopo. </p>
       <div class="containerDOS">
         <!-- Fila 1 -->
-        <a href="{{Aries}}" class="button-containerDOS">Aries</a>
-        <a href="{{Tauro}}" class="button-containerDOS">Tauro</a>
-        <a href="{{Geminis}}" class="button-containerDOS">Géminis</a>
+        <a href="{{Aries}}" target=”_blank” class="button-containerDOS">Aries</a>
+        <a href="{{Tauro}}" target=”_blank” class="button-containerDOS">Tauro</a>
+        <a href="{{Geminis}}" target=”_blank” class="button-containerDOS">Géminis</a>
 
         <!-- Fila 2 -->
-        <a href="{{Cancer}}" class="button-containerDOS">Cáncer</a>
-        <a href="{{Leo}}" class="button-containerDOS">Leo</a>
-        <a href="{{Virgo}}" class="button-containerDOS">Virgo</a>
+        <a href="{{Cancer}}" target=”_blank” class="button-containerDOS">Cáncer</a>
+        <a href="{{Leo}}" target=”_blank” class="button-containerDOS">Leo</a>
+        <a href="{{Virgo}}" target=”_blank” class="button-containerDOS">Virgo</a>
 
         <!-- Fila 3 -->
-        <a href="{{Piscis}}" class="button-containerDOS">Piscis</a>
-        <a href="{{Libra}}" class="button-containerDOS">Libra</a>
-        <a href="{{Escorpio}}" class="button-containerDOS">Escorpión</a>
+        <a href="{{Piscis}}" target=”_blank” class="button-containerDOS">Piscis</a>
+        <a href="{{Libra}}" target=”_blank” class="button-containerDOS">Libra</a>
+        <a href="{{Escorpio}}" target=”_blank” class="button-containerDOS">Escorpión</a>
         <!-- Fila 4 -->
-        <a href="{{Sagitario}}" class="button-containerDOS">Sagitario</a>
-        <a href="{{Capricornio}}" class="button-containerDOS">Capricornio</a>
-        <a href="{{Acuario}}" class="button-containerDOS">Acuario</a>
+        <a href="{{Sagitario}}" target=”_blank” class="button-containerDOS">Sagitario</a>
+        <a href="{{Capricornio}}" target=”_blank” class="button-containerDOS">Capricornio</a>
+        <a href="{{Acuario}}" target=”_blank” class="button-containerDOS">Acuario</a>
       </div>
       <p>
     </div>
@@ -88,6 +88,7 @@
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
                 <a href="{{'https://open.spotify.com/track/' + rockList[0].track.id}}"
+                  target=”_blank”
                   class="btn btn-sm btn-outline-secondary">
                   Listen
                 </a>
@@ -114,6 +115,7 @@
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
                 <a href="{{'https://open.spotify.com/track/' + rockList[1].track.id}}"
+                  target=”_blank”
                   class="btn btn-sm btn-outline-secondary">
                   Listen
                 </a>
@@ -139,6 +141,7 @@
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
                 <a href="{{'https://open.spotify.com/track/' + rockList[2].track.id}}"
+                  target=”_blank”
                   class="btn btn-sm btn-outline-secondary">
                   Listen
                 </a>
@@ -168,7 +171,8 @@
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
                 <a href="{{'https://open.spotify.com/track/' + popList[0].track.id}}"
-                  class="btn btn-sm btn-outline-secondary">
+                  target=”_blank”
+                 class="btn btn-sm btn-outline-secondary">
                   Listen
                 </a>
               </div>
@@ -193,6 +197,7 @@
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
                 <a href="{{'https://open.spotify.com/track/' + popList[1].track.id}}"
+                  target=”_blank”
                   class="btn btn-sm btn-outline-secondary">
                   Listen
                 </a>
@@ -218,6 +223,7 @@
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
                 <a href="{{'https://open.spotify.com/track/' + popList[2].track.id}}"
+                  target=”_blank”
                   class="btn btn-sm btn-outline-secondary">
                   Listen
                 </a>
@@ -248,6 +254,7 @@
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
                 <a href="{{'https://open.spotify.com/track/' + hipHopList[0].track.id}}"
+                   target=”_blank”
                   class="btn btn-sm btn-outline-secondary">
                   Listen
                 </a>
@@ -273,6 +280,7 @@
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
                 <a href="{{'https://open.spotify.com/track/' + hipHopList[1].track.id}}"
+                  target=”_blank”
                   class="btn btn-sm btn-outline-secondary">
                   Listen
                 </a>
@@ -298,6 +306,7 @@
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
                 <a href="{{'https://open.spotify.com/track/' + hipHopList[2].track.id}}"
+                  target=”_blank”
                   class="btn btn-sm btn-outline-secondary">
                   Listen
                 </a>
