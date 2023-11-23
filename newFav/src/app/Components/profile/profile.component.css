@@ -1,5 +1,25 @@
 
 
+.containerALTO {
+    background-image: url('../../../assets/img/sunrise.jpg');
+    min-height: 100vh;
+    min-width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.leadDescription{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 80%;
+  margin: auto; 
+  text-align: center;
+  font-size: 1.2em; 
+  margin-bottom: 20px;
+}
+
 .p {
     display: block;
     margin-block-start: 1em;

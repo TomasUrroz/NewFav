@@ -1,13 +1,13 @@
 <app-nav-bar></app-nav-bar>
 
-<div class="container">
+<div class="containerALTO">
   <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
     <h1 class="display-4 fw-normal"> <strong> Bienvenido a New Fav </strong> </h1>
     <p class="fs-5 text-muted">¡{{ dataUser?.email }}!</p>
-    <p class="lead text-body-secondary"><strong>Welcome to New Fav, a cutting-edge social network designed for
+    <p class="leadDescription ">Welcome to New Fav, a cutting-edge social network designed for
         enthusiasts of all things entertainment. New Fav sets itself apart by initially focusing on the world of music,
         allowing users to seamlessly share and enjoy their favorite tunes with friends. Our platform provides a dynamic
-        and immersive environment for music lovers to connect, discover, and amplify their passion.</strong> </p>
+        and immersive environment for music lovers to connect, discover, and amplify their passion. </p>
     <div class="cancionRecomendada">
       <div class="image-container">
         <img src="{{recomToday.track.album.images[1].url}}" alt="Imagen">
@@ -21,7 +21,6 @@
         <a href="{{'https://open.spotify.com/track/' + recomToday.track.id}}" target=”_blank” class="button-recomendada">Listen</a>
       </div>
     </div>
-
   </div>
 
   <section class="arribita pricing-header p-3 pb-md-4 mx-auto text-center">

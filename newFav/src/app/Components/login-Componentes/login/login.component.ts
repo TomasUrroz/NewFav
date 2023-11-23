@@ -11,7 +11,7 @@ import { Auth,
   onAuthStateChanged,
   browserSessionPersistence,
   inMemoryPersistence,
-  UserCredential } from 'firebase/auth';
+  UserCredential, User  } from 'firebase/auth';
   import { AuthService } from 'app/Services/auth.service'; // Asegúrate de importar correctamente el servicio
 
 
@@ -41,7 +41,11 @@ export class LoginComponent implements OnInit{
     }
 
 ngOnInit(): void {
-  
+  this.afAuth.authState.subscribe((user) => {
+    if (user) {
+      this.router.navigate(['/profile']);
+    }
+  });
 }
 
      login(){
@@ -50,8 +54,9 @@ ngOnInit(): void {
       
        this.loading = true;
        //console.log(email,password);
-       this.afAuth.signInWithEmailAndPassword(email,password).then((user) => {
-         if(user.user?.emailVerified){
+       this.afAuth.signInWithEmailAndPassword(email,password).then((userCredential) => {
+        const user  = userCredential.user;
+         if(user?.emailVerified){
            this.router.navigate(['/profile']);
          }else{
            this.router.navigate(['/verificar-correo']);
@@ -62,6 +67,12 @@ ngOnInit(): void {
          console.log(error);
        })
      }
+   
+  }
+
+
+
+
 
 
 
@@ -95,4 +106,3 @@ ngOnInit(): void {
     // }
 
 
-}
