@@ -7,6 +7,7 @@ import { RecuperarPasswordComponent } from './Components/login-Componentes/recup
 import { ProfileComponent } from './Components/profile/profile.component';
 import { AboutPagesComponent } from './Pages/about-pages/about-pages.component';
 import { FeaturesPageComponent } from './Pages/features-page/features-page.component';
+import { PlaylistComponent } from './Components/playlist/playlist.component';
 
 const routes: Routes = [
   {path: "home", component: HomePageComponent},
@@ -14,9 +15,10 @@ const routes: Routes = [
   {path: "profile", component: ProfileComponent},
   {path: "about", component: AboutPagesComponent},
   {path: "features", component: FeaturesPageComponent},
+  {path: "playlist", component: PlaylistComponent},
   
-  {path: "", redirectTo: 'login', pathMatch:'full'}, //cambiar 'profile' por 'login'
-  {path: "login", component: LoginComponent},
+  {path: "", redirectTo: 'profile', pathMatch:'full'}, //cambiar 'profile' por 'login'
+  //{path: "login", component: LoginComponent},
   {path: "registrar-usuario", component: RegistrarUsuarioComponent},
   {path: "verificar-correo", component: RegistrarUsuarioComponent},
   {path: "recuperar-password", component: RecuperarPasswordComponent},
