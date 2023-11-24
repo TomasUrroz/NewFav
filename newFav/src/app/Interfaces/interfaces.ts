@@ -125,3 +125,12 @@ export enum TrackType {
 export interface VideoThumbnail {
     url: null;
 }
+
+export interface Lista {
+    id: number,
+    title: string,
+    user: string,
+    date: Date,
+    songs: string[],
+    description: string
+}
