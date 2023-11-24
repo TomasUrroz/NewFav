@@ -24,6 +24,8 @@ import { environment } from 'environments/environments';
 import { DisplaySongComponent } from './Components/Shared/display-song/display-song.component';
 import { AboutPagesComponent } from './Pages/about-pages/about-pages.component';
 import { FeaturesPageComponent } from './Pages/features-page/features-page.component';
+import { PlaylistComponent } from './Components/playlist/playlist.component';
+
 
 
 
@@ -43,6 +45,8 @@ import { FeaturesPageComponent } from './Pages/features-page/features-page.compo
     DisplaySongComponent,
     AboutPagesComponent,
     FeaturesPageComponent,
+    PlaylistComponent,
+
   ],
   imports: [
     BrowserModule,
