@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&display=swap');
+
 .contenedora {
     display: flex;
     flex-direction: column;
@@ -41,3 +43,8 @@
   button:hover {
     background-color: #cc0000;  
   }
+
+h2{
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Permanent Marker', cursive;
+}
