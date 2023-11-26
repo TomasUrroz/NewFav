@@ -7,6 +7,8 @@ import { Lista } from 'app/Interfaces/interfaces';
 })
 export class ListGeneratorService {
 
+  sDataUser: any;
+  sList: Lista[] | undefined;
   url: string ='http://localhost:4000/lists';
 
   constructor(private router: Router) { }

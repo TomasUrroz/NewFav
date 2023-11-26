@@ -130,7 +130,7 @@ export interface Lista {
     id: number,
     title: string,
     user: string,
-    date: Date,
+    date: string,
     songs: string[],
     description: string
 }

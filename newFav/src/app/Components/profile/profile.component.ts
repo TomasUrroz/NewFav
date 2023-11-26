@@ -59,6 +59,7 @@ export class ProfileComponent implements OnInit {
     this.afAuth.currentUser.then((user) => {
       if (user && user.emailVerified) {
         this.dataUser = user;
+        this.lg.sDataUser = user;
         console.log(user);
       } else {
         this.router.navigate(['/login']);
@@ -122,6 +123,7 @@ export class ProfileComponent implements OnInit {
 
   async storeLists() {
     this.list = await this.lg.getLists(this.dataUser.email);
+    this.lg.sList = this.list;
   }
 
   async saveToList(id: number) {
@@ -131,7 +133,7 @@ export class ProfileComponent implements OnInit {
   }
 
   async createList(){
-    
+
   }
 
   logOut() {

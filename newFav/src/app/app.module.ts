@@ -54,7 +54,7 @@ import { PlaylistComponent } from './Components/playlist/playlist.component';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     BrowserAnimationsModule,
-    ToastrModule.forRoot(), 
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

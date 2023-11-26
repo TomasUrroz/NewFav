@@ -48,3 +48,205 @@ h2{
     font-family: 'Bebas Neue', sans-serif;
     font-family: 'Permanent Marker', cursive;
 }
+
+
+
+.containerALTO {
+  background-image: url('../../../assets/img/sunrise.jpg');
+  min-height: 100vh;
+  min-width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+.leadDescription{
+display: flex;
+align-items: center;
+justify-content: center;
+max-width: 80%;
+margin: auto; 
+text-align: center;
+font-size: 1.2em; 
+margin-bottom: 20px;
+}
+
+.p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.cancionRecomendada {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px; 
+  backdrop-filter: blur(8px); 
+}
+
+.image-container {
+  flex: 0 0 150px; 
+  margin-right: 20px;
+}
+
+.image-container img {
+  width: 75%;
+  border-radius: 8px; 
+}
+
+.text-container {
+  flex: 1; 
+}
+
+.arribita{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: 100%;
+}
+
+.containerDOS {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.button-containerDOS {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 90px;
+  height: 40px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.containerUNO {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.button-containerUNO {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 90px;
+  height: 40px;
+  background-color: none;
+  color: #ffffff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.button-containerUNO:hover {
+  background-color: #0056b3;
+}
+.button-containerDOS:hover {
+  background-color: #0056b3;
+}
+
+
+.containerTres {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+
+
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+
+
+.card {
+  height: 200px; 
+  width: 200px; 
+}
+
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+.card-text{
+  text-align: center;
+  
+}  
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img {
+  height:  125px;
+  width: 112px ;
+  margin: auto;
+  margin-top: 25px;
+  border-radius: 8px;
+}
+
+.button-recomendada{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 90px;
+  height: 40px;
+  margin: 1px auto;
+  text-decoration: none;
+  color: #ffffff;
+}
+.button-recomendada:hover {
+  background-color: #45505c;
+}
+
+h3{
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.recoGenero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  border: black solid 1px;
+}

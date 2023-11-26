@@ -1,38 +1,26 @@
 <app-nav-bar></app-nav-bar>
 <main class="contenedora">
-    <h2>Playlist</h2>
+  <h2>Playlist</h2>
 
-      <table style="text-align: center;" border="1">
-        <thead>
-          <tr>
-            <th>   #   </th>
-            <th> Name </th>
-            <th> Artist </th>
-            <th> Duration </th>
-            <th> Reviews </th>
-            <th> Remove </th>
-          </tr>
-        </thead>
-        <tbody>
-            <tr >
-                <td>1</td>
-                <td>flowers</td>
-                <td>miley cyrus</td>
-                <td>3:45</td>
-                <td>alta cancion</td>
-                <td><button>X</button></td>
-                
-              </tr> 
-              <tr >
-                <td>1</td>
-                <td>flowers</td>
-                <td>miley cyrus</td>
-                <td>3:45</td>
-                <td>alta cancion</td>
-                <td><button>X</button></td>
-                
-              </tr> 
-          <!-- <tr *ngFor="let task of tasks">
+  <h3 class="musicNAME">Pop</h3>
+  <section class="recoGenero">
+    <div class="album" *ngFor="let item of ">
+      <div class="containerTres">
+        <div class="col">
+          <div class="card">
+            <img class="img" src="newFav\src\assets\img\login.png" />
+            <div class="card-body">
+              <p class="card-text">
+                Nombre <br />
+                Artista
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <tr *ngFor="let task of tasks">
             <td>{{ task.id }}</td>
             <td>{{ task.priority }}</td>
             <td>{{ task.description }}</td>
@@ -40,6 +28,4 @@
             <td><button (click)="eliminarTask(task.id!)">X</button></td>
             <td><button [routerLink]="['/editar',task]">Edit</button></td> 
           </tr> -->
-        </tbody>
-      </table>
-    </main>
+</main>
