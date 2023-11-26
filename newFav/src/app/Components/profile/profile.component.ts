@@ -75,7 +75,7 @@ export class ProfileComponent implements OnInit {
     this.popuLists(3);
     this.popuHoros();
     this.popuMood();
-  //  this.storeLists();
+    this.storeLists();
   }
 
   async popuLists(x: number) {
@@ -124,14 +124,18 @@ export class ProfileComponent implements OnInit {
       console.log(error);
     }
   }
+  async storeLists() {
+    this.list = await this.lg.getLists(this.dataUser.email);
+   this.lg.sList = this.list;
+  }
+  async createList(){
+
+  }
 
   get getUser():User | undefined{
     return this.authService.currentUser;
 
-  // async storeLists() {
-  //   this.list = await this.lg.getLists(this.dataUser.email);
-    this.lg.sList = this.list;
-  // }
+
 
   // async saveToList(id: number) {
   //   if (this.list != undefined) {
@@ -139,16 +143,10 @@ export class ProfileComponent implements OnInit {
   //   }
   // }
 
-  async createList(){
 
+  // logOut() {
+  //   this.afAuth.signOut().then(() => this.router.navigate(['/login']));
+  // }
   }
-
-  // logOut() {
-  //   this.afAuth.signOut().then(() => this.router.navigate(['/login']));
-  // }
-  // logOut() {
-  //   this.afAuth.signOut().then(() => this.router.navigate(['/login']));
-  // }
-}
 }
 
