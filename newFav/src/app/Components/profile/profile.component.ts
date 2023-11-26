@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
-import { Track } from 'app/Interfaces/interfaces';
+import { Track, User } from 'app/Interfaces/interfaces';
+import { AuthService } from 'app/Services/auth.service';
 import { GetApiInfoService } from 'app/Services/get-api-info.service';
 
 @Component({
@@ -37,7 +38,7 @@ export class ProfileComponent implements OnInit {
   gym:string = '';
   clean:string = '';
 
-  constructor(private afAuth: AngularFireAuth, private router: Router, private gai:GetApiInfoService) {}
+  constructor(private afAuth: AngularFireAuth, private router: Router, private gai:GetApiInfoService, private authService: AuthService) {}
 
   ngOnInit(): void {
     this.popuLists(3);
@@ -95,7 +96,11 @@ export class ProfileComponent implements OnInit {
       console.log(error);
     }
   }
-  logOut() {
-    this.afAuth.signOut().then(() => this.router.navigate(['/login']));
+
+  get getUser():User | undefined{
+    return this.authService.currentUser;
   }
+  // logOut() {
+  //   this.afAuth.signOut().then(() => this.router.navigate(['/login']));
+  // }
 }

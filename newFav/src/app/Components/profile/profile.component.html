@@ -3,7 +3,7 @@
 <div class="containerALTO">
   <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
     <h1 class="display-4 fw-normal"> <strong> Bienvenido a New Fav </strong> </h1>
-    <p class="fs-5 text-muted">¡{{ dataUser?.email }}!</p>
+    <p class="usuario">¡ {{ getUser?.user }} !</p>
     <p class="leadDescription ">Welcome to New Fav, a cutting-edge social network designed for
         enthusiasts of all things entertainment. New Fav sets itself apart by initially focusing on the world of music,
         allowing users to seamlessly share and enjoy their favorite tunes with friends. Our platform provides a dynamic
@@ -24,7 +24,7 @@
   </div>
 
   <section class="arribita pricing-header p-3 pb-md-4 mx-auto text-center">
-    <div class="col-lg-6 col-md-8 mx-auto row py-lg-5">
+    <div class="fellings col-lg-6 col-md-8 mx-auto row py-lg-5">
       <h2 class="fw-light"> <strong> Como se siente: </strong> </h2>
       <p class="lead text-body-secondary">Seleccione su mood. </p>
       <p>
@@ -40,7 +40,7 @@
 
       </div>
     </div>
-    <div class="col-lg-6 col-md-8 mx-auto row py-lg-5">
+    <div class="horoscopo col-lg-6 col-md-8 mx-auto row py-lg-5">
       <h2 class="fw-light"> <strong>Horoscopo</strong> </h2>
       <p class="lead text-body-secondary">Seleccione su horoscopo. </p>
       <div class="containerDOS">
@@ -91,6 +91,17 @@
                   class="btn btn-sm btn-outline-secondary">
                   Listen
                 </a>
+                <div class="add-playlists-btn">
+                  <button class="btn btn-sm btn-outline-secondary rounded-pill" id="addPlaylistsBtn">
+                    Add Playlists
+                  </button>
+                  <div class="options-container" id="optionsContainer">
+                    <!-- Contenido de las opciones -->
+                    <a href="#" class="option">Option 1</a>
+                    <a href="#" class="option">Option 2</a>
+                    <a href="#" class="option">Option 3</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -317,3 +328,4 @@
     </div>
   </div>
 </section>
+<app-footer></app-footer>

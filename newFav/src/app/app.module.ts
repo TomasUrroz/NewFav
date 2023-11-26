@@ -17,14 +17,12 @@ import { FooterComponent } from './Components/Shared/footer/footer.component';
 import { HomePageComponent } from './Pages/home-page/home-page.component';
 import { LoginComponent } from './Components/login-Componentes/login/login.component';
 import { RegistrarUsuarioComponent } from './Components/login-Componentes/registrar-usuario/registrar-usuario.component';
-import { RecuperarPasswordComponent } from './Components/login-Componentes/recuperar-password/recuperar-password.component';
-import { VerificarCorreoComponent } from './Components/login-Componentes/verificar-correo/verificar-correo.component';
 import { SpinnerComponent } from './Components/Shared/spinner/spinner.component';
 import { environment } from 'environments/environments';
 import { DisplaySongComponent } from './Components/Shared/display-song/display-song.component';
 import { AboutPagesComponent } from './Pages/about-pages/about-pages.component';
 import { FeaturesPageComponent } from './Pages/features-page/features-page.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -37,8 +35,6 @@ import { FeaturesPageComponent } from './Pages/features-page/features-page.compo
     HomePageComponent,
     LoginComponent,
     RegistrarUsuarioComponent,
-    RecuperarPasswordComponent,
-    VerificarCorreoComponent,
     SpinnerComponent,
     DisplaySongComponent,
     AboutPagesComponent,
@@ -51,6 +47,7 @@ import { FeaturesPageComponent } from './Pages/features-page/features-page.compo
     AngularFireModule.initializeApp(environment.firebaseConfig),
     BrowserAnimationsModule,
     ToastrModule.forRoot(), 
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

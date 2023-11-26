@@ -125,3 +125,11 @@ export enum TrackType {
 export interface VideoThumbnail {
     url: null;
 }
+
+
+export interface User{
+    user: string,
+    email: string,
+    password: string,
+    id?:number
+  }

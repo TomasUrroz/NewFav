@@ -1,19 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
-import { ErrorsService } from 'app/Services/errors.service';
-import { Auth,
-  getAuth, 
-  setPersistence, 
-  browserLocalPersistence,
-  onAuthStateChanged,
-  browserSessionPersistence,
-  inMemoryPersistence,
-  UserCredential, User  } from 'firebase/auth';
-  import { AuthService } from 'app/Services/auth.service'; // Asegúrate de importar correctamente el servicio
-
+import { User } from '../../../Interfaces/interfaces';
+import { AuthService } from '../../../Services/auth.service';
 
 
 @Component({
@@ -23,86 +12,32 @@ import { Auth,
 })
 export class LoginComponent implements OnInit{
   
-  loginUsuario: FormGroup;
   loading: boolean = false;
-
   
-  
-  constructor(private fb:FormBuilder, 
-    private afAuth:AngularFireAuth, 
-    private authService: AuthService,
-    private toastr: ToastrService, 
-    private router: Router,
-    private fbErrors: ErrorsService){
-      this.loginUsuario = this.fb.group({
-        email: ['', [Validators.required, Validators.email]],
-        password: ['', [Validators.required, Validators.minLength(6)]],
-      });
-    }
+  private formBuilder: FormBuilder = inject(FormBuilder)
+  private auth: AuthService = inject(AuthService)
+  private router: Router = inject(Router)
 
-ngOnInit(): void {
-  this.afAuth.authState.subscribe((user) => {
-    if (user) {
-      this.router.navigate(['/profile']);
-    }
-  });
+  formulario: FormGroup = this.formBuilder.group({
+    user: ['', Validators.required],
+    // email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required, Validators.minLength(6)]],
+  })
+  
+  constructor(){    }
+
+  ngOnInit(): void {}
+
+  iniciarSession() {
+    if (this.formulario.invalid) return;
+
+    this.auth.verificarUserAndPass(
+      this.formulario.controls['user'].value,
+      this.formulario.controls['password'].value)
+
+  }
+   
 }
 
-     login(){
-       const email = this.loginUsuario.value.email;
-       const password = this.loginUsuario.value.password;
-      
-       this.loading = true;
-       //console.log(email,password);
-       this.afAuth.signInWithEmailAndPassword(email,password).then((userCredential) => {
-        const user  = userCredential.user;
-         if(user?.emailVerified){
-           this.router.navigate(['/profile']);
-         }else{
-           this.router.navigate(['/verificar-correo']);
-         }
-       }).catch((error) => {
-         this.loading = false;
-         this.toastr.error(this.fbErrors.codeError(error.code),'Error');
-         console.log(error);
-       })
-     }
-   
-  }
-
-
-
-
-
-
-
-    // loginWithPersistence() {
-    //   const email = this.loginUsuario.value.email;
-    //   const password = this.loginUsuario.value.password;
-  
-    //   this.loading = true;
-  
-    //   this.authService.loginWithPersistence(email, password)
-    //     .then((user) => {
-    //       this.handleAuthentication(user);
-    //     })
-    //     .catch((error) => {
-    //       this.handleAuthenticationError(error);
-    //     });
-    // }
-  
-    // private handleAuthentication(user: any) {
-    //   if (user.user?.emailVerified) {
-    //     this.router.navigate(['/profile']);
-    //   } else {
-    //     this.router.navigate(['/verificar-correo']);
-    //   }
-    // }
-  
-    // private handleAuthenticationError(error: any) {
-    //   this.loading = false;
-    //   this.toastr.error(this.fbErrors.codeError(error.code), 'Error');
-    //   console.log(error);
-    // }
 
 
