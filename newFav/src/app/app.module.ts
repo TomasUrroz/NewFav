@@ -22,7 +22,13 @@ import { environment } from 'environments/environments';
 import { DisplaySongComponent } from './Components/Shared/display-song/display-song.component';
 import { AboutPagesComponent } from './Pages/about-pages/about-pages.component';
 import { FeaturesPageComponent } from './Pages/features-page/features-page.component';
+<<<<<<< HEAD
 import { HttpClientModule } from '@angular/common/http';
+=======
+import { PlaylistComponent } from './Components/playlist/playlist.component';
+
+
+>>>>>>> f2c19a81f45720f761ac7935d43a1edf8ac75063
 
 
 @NgModule({
@@ -39,6 +45,8 @@ import { HttpClientModule } from '@angular/common/http';
     DisplaySongComponent,
     AboutPagesComponent,
     FeaturesPageComponent,
+    PlaylistComponent,
+
   ],
   imports: [
     BrowserModule,
