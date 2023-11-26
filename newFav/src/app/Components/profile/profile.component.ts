@@ -1,12 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
-<<<<<<< HEAD
-import { Track, User } from 'app/Interfaces/interfaces';
+import { User } from 'app/Interfaces/interfaces';
 import { AuthService } from 'app/Services/auth.service';
-=======
 import { Lista, Track } from 'app/Interfaces/interfaces';
->>>>>>> f2c19a81f45720f761ac7935d43a1edf8ac75063
 import { GetApiInfoService } from 'app/Services/get-api-info.service';
 import { ListGeneratorService } from 'app/Services/list-generator.service';
 
@@ -51,16 +48,14 @@ export class ProfileComponent implements OnInit {
   gym: string = '';
   clean: string = '';
 
-<<<<<<< HEAD
-  constructor(private afAuth: AngularFireAuth, private router: Router, private gai:GetApiInfoService, private authService: AuthService) {}
-=======
+
   constructor(
     private afAuth: AngularFireAuth,
     private router: Router,
     private gai: GetApiInfoService,
-    private lg: ListGeneratorService
+    private lg: ListGeneratorService,
+    private authService: AuthService
   ) {}
->>>>>>> f2c19a81f45720f761ac7935d43a1edf8ac75063
 
   ngOnInit(): void {
     this.populateAll();
@@ -79,7 +74,7 @@ export class ProfileComponent implements OnInit {
     this.popuLists(3);
     this.popuHoros();
     this.popuMood();
-    this.storeLists();
+  //  this.storeLists();
   }
 
   async popuLists(x: number) {
@@ -129,29 +124,29 @@ export class ProfileComponent implements OnInit {
     }
   }
 
-<<<<<<< HEAD
   get getUser():User | undefined{
     return this.authService.currentUser;
-=======
-  async storeLists() {
-    this.list = await this.lg.getLists(this.dataUser.email);
-  }
 
-  async saveToList(id: number) {
-    if (this.list != undefined) {
-      await this.lg.putList(this.list[id]);
-    }
-  }
+  // async storeLists() {
+  //   this.list = await this.lg.getLists(this.dataUser.email);
+  // }
 
-  async createList(){
+  // async saveToList(id: number) {
+  //   if (this.list != undefined) {
+  //     await this.lg.putList(this.list[id]);
+  //   }
+  // }
+
+  // async createList(){
     
-  }
+  // }
 
-  logOut() {
-    this.afAuth.signOut().then(() => this.router.navigate(['/login']));
->>>>>>> f2c19a81f45720f761ac7935d43a1edf8ac75063
-  }
+  // logOut() {
+  //   this.afAuth.signOut().then(() => this.router.navigate(['/login']));
+  // }
   // logOut() {
   //   this.afAuth.signOut().then(() => this.router.navigate(['/login']));
   // }
 }
+}
+

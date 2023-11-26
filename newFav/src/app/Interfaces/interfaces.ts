@@ -126,7 +126,7 @@ export interface VideoThumbnail {
     url: null;
 }
 
-<<<<<<< HEAD
+
 
 export interface User{
     user: string,
@@ -134,7 +134,7 @@ export interface User{
     password: string,
     id?:number
   }
-=======
+
 export interface Lista {
     id: number,
     title: string,
@@ -143,4 +143,3 @@ export interface Lista {
     songs: string[],
     description: string
 }
->>>>>>> f2c19a81f45720f761ac7935d43a1edf8ac75063
