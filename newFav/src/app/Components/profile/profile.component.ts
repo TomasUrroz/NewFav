@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
+import { User } from 'app/Interfaces/interfaces';
+import { AuthService } from 'app/Services/auth.service';
 import { Lista, Track } from 'app/Interfaces/interfaces';
 import { GetApiInfoService } from 'app/Services/get-api-info.service';
 import { ListGeneratorService } from 'app/Services/list-generator.service';
@@ -46,11 +48,13 @@ export class ProfileComponent implements OnInit {
   gym: string = '';
   clean: string = '';
 
+
   constructor(
     private afAuth: AngularFireAuth,
     private router: Router,
     private gai: GetApiInfoService,
-    private lg: ListGeneratorService
+    private lg: ListGeneratorService,
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {
@@ -71,7 +75,7 @@ export class ProfileComponent implements OnInit {
     this.popuLists(3);
     this.popuHoros();
     this.popuMood();
-    this.storeLists();
+  //  this.storeLists();
   }
 
   async popuLists(x: number) {
@@ -121,22 +125,30 @@ export class ProfileComponent implements OnInit {
     }
   }
 
-  async storeLists() {
-    this.list = await this.lg.getLists(this.dataUser.email);
-    this.lg.sList = this.list;
-  }
+  get getUser():User | undefined{
+    return this.authService.currentUser;
 
-  async saveToList(id: number) {
-    if (this.list != undefined) {
-      await this.lg.putList(this.list[id]);
-    }
-  }
+  // async storeLists() {
+  //   this.list = await this.lg.getLists(this.dataUser.email);
+    this.lg.sList = this.list;
+  // }
+
+  // async saveToList(id: number) {
+  //   if (this.list != undefined) {
+  //     await this.lg.putList(this.list[id]);
+  //   }
+  // }
 
   async createList(){
 
   }
 
-  logOut() {
-    this.afAuth.signOut().then(() => this.router.navigate(['/login']));
-  }
+  // logOut() {
+  //   this.afAuth.signOut().then(() => this.router.navigate(['/login']));
+  // }
+  // logOut() {
+  //   this.afAuth.signOut().then(() => this.router.navigate(['/login']));
+  // }
 }
+}
+

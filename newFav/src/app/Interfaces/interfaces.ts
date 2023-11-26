@@ -126,6 +126,15 @@ export interface VideoThumbnail {
     url: null;
 }
 
+
+
+export interface User{
+    user: string,
+    email: string,
+    password: string,
+    id?:number
+  }
+
 export interface Lista {
     id: number,
     title: string,

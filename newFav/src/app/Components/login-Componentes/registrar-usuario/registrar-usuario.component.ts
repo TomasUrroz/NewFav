@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AngularFireAuth } from '@angular/fire/compat/auth'
-import { ToastrService } from 'ngx-toastr';
-import { Router } from '@angular/router';
-import { ErrorsService } from 'app/Services/errors.service';
-
+import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { UserService } from '../../../Services/user.service';
+import { User } from '../../../Interfaces/interfaces';
 
 @Component({
   selector: 'app-registrar-usuario',
@@ -13,62 +10,60 @@ import { ErrorsService } from 'app/Services/errors.service';
 })
 export class RegistrarUsuarioComponent implements OnInit{
 
-  registrarUsuario: FormGroup;
+
   loading: boolean = false;
 
-  constructor(private fb:FormBuilder, 
-              private afAuth:AngularFireAuth, 
-              private toastr: ToastrService, 
-              private router: Router,
-              private fbErrors: ErrorsService ){ 
-    this.registrarUsuario = this.fb.group({
-      email: ['', [Validators.required,Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      repetirPassword: ['', Validators.required],
-    })
-   }
+  constructor(private formBuilder: FormBuilder,private user: UserService){
 
-  ngOnInit(): void{
   }
 
-  registrar(){
-    const email = this.registrarUsuario.value.email;
-    const password = this.registrarUsuario.value.password;
-    const repetirPassword = this.registrarUsuario.value.repetirPassword;
+ngOnInit(): void {
+}
 
-    if (password !== repetirPassword){
-      this.toastr.error('Las contraseñas ingresadas deben ser las mismas.', 'Error');
+  list: User[] = [];
+  
+  checkPasswords: ValidatorFn = (group: AbstractControl):  ValidationErrors | null => { 
+    let pass = group.get('password')!.value;
+    let confirmPass = group.get('repetirPassword')!.value
+    return pass === confirmPass ? null : { notSame: true }
+  }
+  
+  usuarioNuevo: FormGroup = this.formBuilder.group({
+    username:['',[Validators.required,Validators.minLength(3)]],
+    email:['',[Validators.required,Validators.email]],
+    password:['',[Validators.required,Validators.minLength(6)]],
+    repetirPassword:['',[Validators.required]],
+  }, { validators: this.checkPasswords })
+  
+  async registraUsuario(){
+    if(this.usuarioNuevo.invalid){
+      this.usuarioNuevo.markAllAsTouched();
+      return;
+    } 
+
+    this.list = await this.user.getUsers();
+    const usuarioEncontrado: User|undefined = this.list.find((i) => i.user === this.usuarioNuevo.controls['username'].value);
+
+    if(usuarioEncontrado){
+      alert('El usuario elegido ya existe');
+      this.usuarioNuevo.reset();
       return;
     }
 
-    this.loading = true;
-    
-    this.afAuth
-    .createUserWithEmailAndPassword(email, password)
-    .then((user) => {
-      // this.loading = false;
-      // this.toastr.success('El usuario fue registrado con exito!','Usuario Registrado');
-      // this.router.navigate(['/login']);
-      // console.log(user);
-      this.verificarEmail();
-    })
-    .catch((error) => {
-      this.loading = false;
-      console.log(error);
-      this.toastr.error(this.fbErrors.codeError(error.code), 'Error');
-    })
+    const user: User = {
+      user: this.usuarioNuevo.controls['username'].value,
+      email: this.usuarioNuevo.controls['email'].value,
+      password: this.usuarioNuevo.controls['password'].value,
+    }
+    this.user.postUser(user);
+    alert('Your account was created!')
   }
 
-
-  verificarEmail(){
-    this.afAuth.currentUser.then(user => user?.sendEmailVerification())
-                           .then(() => {
-                            this.toastr.info(
-                              'Le enviamos un correo electronico para su verificacion',
-                              'Verificar correo'
-                            );
-                            this.router.navigate(['/login']);
-                          });
+  validar(field: string, error: string){
+    return this.usuarioNuevo.controls[field].getError(error)
+    &&
+    this.usuarioNuevo.controls[field].touched
   }
+  
 
 }

@@ -1,26 +1,71 @@
 import { Injectable } from '@angular/core';
-
-import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { getAuth, UserCredential, setPersistence, browserLocalPersistence, signInWithEmailAndPassword } from 'firebase/auth';
-
+import { Observable, catchError, map, of, tap } from 'rxjs';
+import { User } from '../Interfaces/interfaces';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
+
+
 export class AuthService {
   clientId: string = 'b20bc978b3e240b997fbd6734c1d405d';
   clientSecret: string = '6d78a3abb98a42b796ed99f4f355a9e5';
   params: any = new URLSearchParams(window.location.search);
   code: any = this.params.get('code');
 
- // private auth = getAuth();
 
-  constructor(private afAuth: AngularFireAuth) {}
 
-  // loginWithPersistence(email: string, password: string): Promise<UserCredential> {
-  //   return setPersistence(this.auth, browserLocalPersistence).then(() =>
-  //     signInWithEmailAndPassword(this.auth, email, password)
-  //   );
-  // }
+
+  private url: string = 'http://localhost:4000/users'
+  private user?: User;
+
+
+
+  constructor(private http: HttpClient, private router: Router) { }
+
+
+
+  get currentUser(): User | undefined {
+    if (!this.user) return undefined
+    //structuredClone(this.user)
+    return { ...this.user };
+  }
+
+  getUsers(): Observable<User[]> {
+    return this.http.get<User[]>(this.url)
+  }
+
+  verificarUserAndPass(user: string, pass: string) {
+
+    this.getUsers().subscribe(users => {
+      users.find(u => {
+        if (u.password === pass && u.user === user) {
+          this.user = u;
+          localStorage.setItem('token', u.id!.toString())
+          this.router.navigate(['/profile'])
+        }
+      });
+    });
+  }
+
+  checkStatusAutenticacion(): Observable<boolean> {
+    const token = localStorage.getItem('token')
+    if (!token) {
+      return of(false)
+    }
+    return this.http.get<User>(`${this.url}/${token}`)
+      .pipe(
+        tap(u => this.user = u),
+        map(u => !!u),
+        catchError(err => of(false))
+      )
+  }
+
+  logout() {
+    this.user = undefined;
+    localStorage.clear()
+  }
 
 }
