@@ -7,27 +7,28 @@ import { ProfileComponent } from './Components/profile/profile.component';
 import { AboutPagesComponent } from './Pages/about-pages/about-pages.component';
 import { FeaturesPageComponent } from './Pages/features-page/features-page.component';
 import { AuthGuard } from '../app/guards/auth-guards';
-import { LoginGuard } from './guards/login-guard';
+//import { LoginGuard } from './guards/login-guard';
 import { PlaylistComponent } from './Components/playlist/playlist.component';
 import { NewPlaylistComponent } from './Components/new-playlist/new-playlist.component';
+import { createAuthGuard } from './guards/login-guard';
+//import { AuthGuardFeatures } from './guards/about-guards';
 
 const routes: Routes = [
-  {path: "home", component: HomePageComponent},
-  {path: "callback", component: HomePageComponent},
 
-  {path: "profile", component: ProfileComponent, canActivate: [AuthGuard]},
-  {path: "about", component: AboutPagesComponent, canActivate: [AuthGuard]},
-  {path: "playlist", component: PlaylistComponent, canActivate: [AuthGuard]},
-  {path: "new-playlist", component: NewPlaylistComponent, canActivate: [AuthGuard]},
-  {path: "features", component: FeaturesPageComponent, canActivate: [AuthGuard]},
-  
-  //{path: "login", component: LoginComponent, canActivate:[LoginGuard]},
-  {path: "registrar-usuario", component: RegistrarUsuarioComponent, canActivate:[LoginGuard]},
+  { path: "login", component: LoginComponent, canActivate: [createAuthGuard] },
+  { path: "registrar-usuario", component: RegistrarUsuarioComponent },
+  { path: "profile", component: ProfileComponent, canActivate: [AuthGuard] }, 
+  { path: "about", component: AboutPagesComponent, canActivate: [AuthGuard] },
+  { path: "playlist", component: PlaylistComponent, canActivate: [AuthGuard] },
+  { path: "new-playlist", component: NewPlaylistComponent, canActivate: [AuthGuard] },
+  { path: "features", component: FeaturesPageComponent},
+
+  // { path: "callback", component: HomePageComponent },
 
 
-  
-  //{path: "**", redirectTo: 'login'},
-  //{path: "", redirectTo: 'login', pathMatch:'full'}, //cambiar 'profile' por 'login'
+
+  { path: "**", redirectTo: 'login' },
+
 
 ];
 
@@ -35,7 +36,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { 
+export class AppRoutingModule {
 
-  
+
 }
