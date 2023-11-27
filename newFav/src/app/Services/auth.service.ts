@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
 
 
 export class AuthService {
-  clientId: string = 'b20bc978b3e240b997fbd6734c1d405d';
-  clientSecret: string = '6d78a3abb98a42b796ed99f4f355a9e5';
+  clientId: string = 'a2da11bbe2c84d9ba5b922b39ad2f778';
+  clientSecret: string = 'eb2f9296d4cc4d949a3e7c51f47df73f';
   params: any = new URLSearchParams(window.location.search);
   code: any = this.params.get('code');
 
