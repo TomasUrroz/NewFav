@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
-import { User } from 'app/Interfaces/interfaces';
+import { Song, User } from 'app/Interfaces/interfaces';
 import { AuthService } from 'app/Services/auth.service';
 import { Lista, Track } from 'app/Interfaces/interfaces';
 import { GetApiInfoService } from 'app/Services/get-api-info.service';
@@ -77,7 +77,13 @@ export class ProfileComponent implements OnInit {
 
   toSave(option: Lista, song: any) {
     this.saveTo = option.id;
-    option.songs.push(song);
+    const newSong: Song = {
+      id: song.track.id,
+      name:song.track.name, 
+      artist: song.track.artists[0].name,
+      imageUrl: song.track.album.images[1].url,      
+    }
+    option.songs.push(newSong);
     this.saveToList(option);
   }
 

@@ -11,25 +11,25 @@
         <div class="col">
           <div class="card">
             <div class="card">
-              <img class="img" src="{{ song.track.album.images[1].url }}" />
+              <img class="img" src="{{ song.imageUrl }}" />
               <div class="card-body">
                 <p class="card-text">
-                  {{ song.track.name }} <br />{{
-                    song.track.artists[0].name
+                  {{ song.name }} <br />{{
+                    song.artist
                   }}
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <a
                       href="{{
-                        'https://open.spotify.com/track/' + song.track.id
+                        'https://open.spotify.com/track/' + song.id
                       }}"
                       target="”_blank”"
                       class="btn btn-sm btn-outline-secondary"
                     >
                       Listen
                     </a>
-                    <a (click)="deleteSong(item.id-1 ,song.track.id)">Remove Song</a>
+                    <a (click)="deleteSong(item.id-1 ,song.id)">Remove Song</a>
 
                   </div>
                 </div>
