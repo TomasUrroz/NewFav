@@ -34,9 +34,8 @@ export class PlaylistComponent implements OnInit {
     if (!ok) return;
 
     if (this.list != undefined) {
-
       this.list[idPL].songs = this.list[idPL].songs.filter(
-        (item) => item.track.id !== idSong
+        (item) => item.id !== idSong
       );
       await this.lg.putList(this.list[idPL]);
     }

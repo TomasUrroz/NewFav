@@ -140,6 +140,13 @@ export interface Lista {
     title: string,
     user?: string,
     date: string,
-    songs: any[],
+    songs: Song[],
     description: string
+}
+
+export interface Song {
+    id: string,
+    name:string, 
+    artist: string,
+    imageUrl: string,
 }
