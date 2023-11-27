@@ -47,7 +47,56 @@
       "title": "xd",
       "user": "thomito@xd.com",
       "date": "11/27/2023",
-      "songs": [],
+      "songs": [        {
+        "id": "37ZJ0p5Jm13JPevGcx4SkF",
+        "name": "Livin' On A Prayer",
+        "artist": "Bon Jovi",
+        "imageUrl": "https://i.scdn.co/image/ab67616d00001e021336b31b6a1799f0de5807ac"
+      },{
+        "id": "08mG3Y1vljYA6bvDt4Wqkj",
+        "name": "Back In Black",
+        "artist": "AC/DC",
+        "imageUrl": "https://i.scdn.co/image/ab67616d00001e020b51f8d91f3a21e8426361ae"
+      },
+      {
+        "id": "72gv4zhNvRVdQA0eOenCal",
+        "name": "Symphony (feat. Zara Larsson)",
+        "artist": "Clean Bandit",
+        "imageUrl": "https://i.scdn.co/image/ab67616d00001e0237fb0680110fbb107740de5d"
+      },{
+        "id": "37ZJ0p5Jm13JPevGcx4SkF",
+        "name": "Livin' On A Prayer",
+        "artist": "Bon Jovi",
+        "imageUrl": "https://i.scdn.co/image/ab67616d00001e021336b31b6a1799f0de5807ac"
+      },{
+        "id": "08mG3Y1vljYA6bvDt4Wqkj",
+        "name": "Back In Black",
+        "artist": "AC/DC",
+        "imageUrl": "https://i.scdn.co/image/ab67616d00001e020b51f8d91f3a21e8426361ae"
+      },
+      {
+        "id": "72gv4zhNvRVdQA0eOenCal",
+        "name": "Symphony (feat. Zara Larsson)",
+        "artist": "Clean Bandit",
+        "imageUrl": "https://i.scdn.co/image/ab67616d00001e0237fb0680110fbb107740de5d"
+      },{
+        "id": "37ZJ0p5Jm13JPevGcx4SkF",
+        "name": "Livin' On A Prayer",
+        "artist": "Bon Jovi",
+        "imageUrl": "https://i.scdn.co/image/ab67616d00001e021336b31b6a1799f0de5807ac"
+      },{
+        "id": "08mG3Y1vljYA6bvDt4Wqkj",
+        "name": "Back In Black",
+        "artist": "AC/DC",
+        "imageUrl": "https://i.scdn.co/image/ab67616d00001e020b51f8d91f3a21e8426361ae"
+      },
+      {
+        "id": "72gv4zhNvRVdQA0eOenCal",
+        "name": "Symphony (feat. Zara Larsson)",
+        "artist": "Clean Bandit",
+        "imageUrl": "https://i.scdn.co/image/ab67616d00001e0237fb0680110fbb107740de5d"
+      }
+    ],
       "description": "xd"
     }
   ]
