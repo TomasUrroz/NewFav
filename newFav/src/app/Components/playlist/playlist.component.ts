@@ -1,3 +1,4 @@
+import { AuthService } from './../../Services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Lista } from 'app/Interfaces/interfaces';
 import { ListGeneratorService } from 'app/Services/list-generator.service';
@@ -8,21 +9,27 @@ import { ListGeneratorService } from 'app/Services/list-generator.service';
   styleUrls: ['./playlist.component.css']
 })
 export class PlaylistComponent implements OnInit {
-  saveTo: number | undefined;
+  list: Lista[] | undefined;
 
-  constructor(private lg:ListGeneratorService){}
+  constructor(private lg:ListGeneratorService, private au:AuthService){}
 
   ngOnInit(): void {
-    this.storeLists();
+    this.generateLists();
   }
   
-  async storeLists() {
-    this.lg.sList = await this.lg.getLists(this.lg.sDataUser.email);
+  async generateLists() {
+    if (this.au.currentUser != undefined) {
+      this.list = await this.lg.getLists(this.au.currentUser.email);
+    }
   }
-
   async saveToList(id: number) {
     if (this.lg.sList != undefined) {
       await this.lg.putList(this.lg.sList[id]);
     }
+  }
+  async deletePlaylist(id:number){
+    const ok = confirm('Desea borrar la playlist?')
+    if(!ok) return
+    this.lg.deleteList(id)
   }
 }

@@ -140,6 +140,6 @@ export interface Lista {
     title: string,
     user?: string,
     date: string,
-    songs: string[],
+    songs: any[],
     description: string
 }

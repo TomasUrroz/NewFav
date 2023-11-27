@@ -29,6 +29,29 @@
           class="button-recomendada"
           >Listen</a
         >
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            {{ saveTitle || "Guardar a playlist" }}
+          </button>
+          <div
+            class="dropdown-menu"
+            aria-labelledby="dropdownMenuButton"
+          >
+            <a
+              class="dropdown-item"
+              *ngFor="let option of list"
+              (click)="toSave(option, hipHopList[1].track.id)"
+              >{{ option.title }}</a
+            >
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -160,7 +183,7 @@
                     <a
                       class="dropdown-item"
                       *ngFor="let option of list"
-                      (click)="toSave(option, rockList[0].track.id)"
+                      (click)="toSave(option, rockList[0])"
                       >{{ option.title }}</a
                     >
                   </div>
@@ -213,7 +236,7 @@
                     <a
                       class="dropdown-item"
                       *ngFor="let option of list"
-                      (click)="toSave(option, rockList[1].track.id)"
+                      (click)="toSave(option, rockList[1])"
                       >{{ option.title }}</a
                     >
                   </div>
@@ -266,7 +289,7 @@
                     <a
                       class="dropdown-item"
                       *ngFor="let option of list"
-                      (click)="toSave(option, rockList[2].track.id)"
+                      (click)="toSave(option, rockList[2])"
                       >{{ option.title }}</a
                     >
                   </div>
@@ -322,7 +345,7 @@
                     <a
                       class="dropdown-item"
                       *ngFor="let option of list"
-                      (click)="toSave(option, popList[0].track.id)"
+                      (click)="toSave(option, popList[0])"
                       >{{ option.title }}</a
                     >
                   </div>
@@ -375,7 +398,7 @@
                     <a
                       class="dropdown-item"
                       *ngFor="let option of list"
-                      (click)="toSave(option, popList[1].track.id)"
+                      (click)="toSave(option, popList[1])"
                       >{{ option.title }}</a
                     >
                   </div>
@@ -428,7 +451,7 @@
                     <a
                       class="dropdown-item"
                       *ngFor="let option of list"
-                      (click)="toSave(option, popList[2].track.id)"
+                      (click)="toSave(option, popList[2])"
                       >{{ option.title }}</a
                     >
                   </div>
@@ -487,7 +510,7 @@
                     <a
                       class="dropdown-item"
                       *ngFor="let option of list"
-                      (click)="toSave(option, hipHopList[0].track.id)"
+                      (click)="toSave(option, hipHopList[0])"
                       >{{ option.title }}</a
                     >
                   </div>
@@ -543,7 +566,7 @@
                     <a
                       class="dropdown-item"
                       *ngFor="let option of list"
-                      (click)="toSave(option, hipHopList[1].track.id)"
+                      (click)="toSave(option, hipHopList[1])"
                       >{{ option.title }}</a
                     >
                   </div>
@@ -599,7 +622,7 @@
                     <a
                       class="dropdown-item"
                       *ngFor="let option of list"
-                      (click)="toSave(option, hipHopList[2].track.id)"
+                      (click)="toSave(option, hipHopList[2])"
                       >{{ option.title }}</a
                     >
                   </div>

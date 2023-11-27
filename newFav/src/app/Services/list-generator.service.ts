@@ -1,18 +1,19 @@
+import { Lista } from './../Interfaces/interfaces';
 import { AuthService } from './auth.service';
 import { Injectable, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Lista } from 'app/Interfaces/interfaces';
+import { GetApiInfoService } from './get-api-info.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ListGeneratorService implements OnInit{
-
+  token: string = "";
   sDataUser: any | undefined;
   sList: Lista[] | undefined;
   url: string ='http://localhost:4400/lists';
 
-  constructor(private router: Router, private AuthService: AuthService) { }
+  constructor(private router: Router, private AuthService: AuthService, private gai: GetApiInfoService) { }
 
   ngOnInit(): void {
     this.sDataUser = this.AuthService.currentUser;
@@ -49,7 +50,7 @@ export class ListGeneratorService implements OnInit{
         { method: 'DELETE' }
       )
       //habria que cambiar aca a la direccion de donde este la lista
-      window.location.href = 'profile.html'
+      window.location.href = 'playlist.html'
     } catch (error) {
       alert(error)
     }
@@ -64,10 +65,12 @@ export class ListGeneratorService implements OnInit{
           headers: { 'Content-type': 'application/json' }
         }
       )
+      alert("La cansion ha sido guardada  ╰（‵□′）╯");
     } catch (error) {
       console.log(error)
     }
   }
+
 
 
 

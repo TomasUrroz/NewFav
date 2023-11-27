@@ -75,11 +75,10 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-  toSave(option: Lista, song: string) {
+  toSave(option: Lista, song: any) {
     this.saveTo = option.id;
     option.songs.push(song);
     this.saveToList(option);
-    alert("La cansion ha sido guardado ╰（‵□′）╯")
   }
 
   async populateAll() {
@@ -137,7 +136,6 @@ export class ProfileComponent implements OnInit {
   async storeLists() {
     if (this.getUser?.email != undefined) {
       this.list = await this.lg.getLists(this.getUser?.email);
-      this.lg.sList = this.list;
     }
   }
 

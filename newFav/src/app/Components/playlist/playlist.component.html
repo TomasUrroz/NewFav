@@ -2,19 +2,37 @@
 <main class="contenedora">
   <h2>Playlist</h2>
 
-  <h3 class="musicNAME">Pop</h3>
-  <section class="recoGenero">
-    <div class="album" *ngFor="let item of ">
+  
+  <section class="recoGenero" *ngFor="let item of list">
+    <h3 class="musicNAME">{{item.title}}</h3>
+    <a (click)="deletePlaylist(item.id)">Delete Playlist</a>
+    <div class="album" *ngFor="let song of item.songs">
       <div class="containerTres">
         <div class="col">
           <div class="card">
-            <img class="img" src="newFav\src\assets\img\login.png" />
-            <div class="card-body">
-              <p class="card-text">
-                Nombre <br />
-                Artista
-              </p>
-            </div>
+            <div class="card">
+              <img class="img" src="{{ song.track.album.images[1].url }}" />
+              <div class="card-body">
+                <p class="card-text">
+                  {{ song.track.name }} <br />{{
+                    song.track.artists[0].name
+                  }}
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a
+                      href="{{
+                        'https://open.spotify.com/track/' + song.track.id
+                      }}"
+                      target="”_blank”"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Listen
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>      
           </div>
         </div>
       </div>
