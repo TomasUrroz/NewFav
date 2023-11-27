@@ -32,12 +32,14 @@ export class PlaylistComponent implements OnInit {
   async deleteSong(idPL: number, idSong: string) {
     const ok = confirm('Desea borrar la cancion?');
     if (!ok) return;
-
+    console.log(this.list);
+    console.log(idPL + " " + idSong);
     if (this.list != undefined) {
-      this.list[idPL].songs = this.list[idPL].songs.filter(
+      let i = this.list.findIndex((element) => element.id === idPL);
+      this.list[i].songs = this.list[i].songs.filter(
         (item) => item.id !== idSong
       );
-      await this.lg.putList(this.list[idPL]);
+      await this.lg.putList(this.list[i]);
     }
   }
 }

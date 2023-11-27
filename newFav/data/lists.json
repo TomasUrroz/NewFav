@@ -38,15 +38,17 @@
           "name": "Livin' On A Prayer",
           "artist": "Bon Jovi",
           "imageUrl": "https://i.scdn.co/image/ab67616d00001e021336b31b6a1799f0de5807ac"
-        },
-        {
-          "id": "6cpk00i5TxCqSeqNi2HuIe",
-          "name": "One More Night",
-          "artist": "Maroon 5",
-          "imageUrl": "https://i.scdn.co/image/ab67616d00001e02fc8633e22a7dba6aab817bff"
         }
       ],
       "description": "cdcd"
+    },
+    {
+      "id": 3,
+      "title": "xd",
+      "user": "thomito@xd.com",
+      "date": "11/27/2023",
+      "songs": [],
+      "description": "xd"
     }
   ]
 }
