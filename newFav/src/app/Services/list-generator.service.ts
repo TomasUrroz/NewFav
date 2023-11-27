@@ -1,18 +1,22 @@
-import { Injectable } from '@angular/core';
+import { AuthService } from './auth.service';
+import { Injectable, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Lista } from 'app/Interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ListGeneratorService {
+export class ListGeneratorService implements OnInit{
 
-  sDataUser: any;
+  sDataUser: any | undefined;
   sList: Lista[] | undefined;
-  url: string ='http://localhost:4000/lists';
+  url: string ='http://localhost:4400/lists';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private AuthService: AuthService) { }
 
+  ngOnInit(): void {
+    this.sDataUser = this.AuthService.currentUser;
+  }
 
   async getLists(user:string){
     try {
@@ -64,6 +68,7 @@ export class ListGeneratorService {
       console.log(error)
     }
   }
+
 
 
 }

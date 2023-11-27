@@ -9,7 +9,7 @@ import { FeaturesPageComponent } from './Pages/features-page/features-page.compo
 import { AuthGuard } from '../app/guards/auth-guards';
 import { LoginGuard } from './guards/login-guard';
 import { PlaylistComponent } from './Components/playlist/playlist.component';
-import { NewPlaylistPageComponent } from './Pages/new-playlist-page/new-playlist-page.component';
+import { NewPlaylistComponent } from './Components/new-playlist/new-playlist.component';
 
 const routes: Routes = [
   {path: "home", component: HomePageComponent},
@@ -17,17 +17,18 @@ const routes: Routes = [
 
   {path: "profile", component: ProfileComponent, canActivate: [AuthGuard]},
   {path: "about", component: AboutPagesComponent, canActivate: [AuthGuard]},
-  {path: "playlist", component: PlaylistComponent},
-  {path: "new-playlist", component: NewPlaylistPageComponent},
+  {path: "playlist", component: PlaylistComponent, canActivate: [AuthGuard]},
+  {path: "new-playlist", component: NewPlaylistComponent, canActivate: [AuthGuard]},
   {path: "features", component: FeaturesPageComponent, canActivate: [AuthGuard]},
   
-  {path: "", redirectTo: 'login', pathMatch:'full'}, //cambiar 'profile' por 'login'
-  {path: "login", component: LoginComponent, canActivate:[LoginGuard]},
+  //{path: "login", component: LoginComponent, canActivate:[LoginGuard]},
   {path: "registrar-usuario", component: RegistrarUsuarioComponent, canActivate:[LoginGuard]},
 
 
   
-  {path: "**", redirectTo: 'login'},
+  //{path: "**", redirectTo: 'login'},
+  //{path: "", redirectTo: 'login', pathMatch:'full'}, //cambiar 'profile' por 'login'
+
 ];
 
 @NgModule({

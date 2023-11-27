@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 //Modules
 import { AppRoutingModule } from './app-routing.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
@@ -24,6 +24,7 @@ import { AboutPagesComponent } from './Pages/about-pages/about-pages.component';
 import { FeaturesPageComponent } from './Pages/features-page/features-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PlaylistComponent } from './Components/playlist/playlist.component';
+import { NewPlaylistComponent } from './Components/new-playlist/new-playlist.component';
 
 
 @NgModule({
@@ -41,7 +42,7 @@ import { PlaylistComponent } from './Components/playlist/playlist.component';
     AboutPagesComponent,
     FeaturesPageComponent,
     PlaylistComponent,
-
+    NewPlaylistComponent
   ],
   imports: [
     BrowserModule,
@@ -51,10 +52,12 @@ import { PlaylistComponent } from './Components/playlist/playlist.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(), 
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {
 
  }

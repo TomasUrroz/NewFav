@@ -1,44 +1,41 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Lista } from 'app/Interfaces/interfaces';
+import { AuthService } from 'app/Services/auth.service';
 import { ListGeneratorService } from 'app/Services/list-generator.service';
 
 @Component({
     selector: 'app-new-playlist',
-    standalone: true,
-    imports: [
-        CommonModule,
-        ReactiveFormsModule
-    ],
     templateUrl: './new-playlist.component.html',
     styleUrls: ['./new-playlist.component.css'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
+
 export class NewPlaylistComponent { 
   
     now:Date = new Date();
 
-    constructor(private fb: FormBuilder, private lg: ListGeneratorService) {}
-  
     form: FormGroup = this.fb.group({
-      title: ['', Validators.required],
-      user: this.lg.sDataUser.email,
-      date: this.now.toLocaleDateString(),
-      description: '',
       id: 0,
+      title: ['', Validators.required],
+      user: this.authService?.currentUser?.email,
+      date: this.now.toLocaleDateString(),
+      songs: [],
+      description: '',
     });
   
+
+    constructor(private fb: FormBuilder, private lg: ListGeneratorService, private authService: AuthService) {}
+  
     async saveList() {
-      if (this.form.invalid) return;
+      if (this.form.invalid ) return;
   
       const list: Lista = {
-          title: this.form.controls['title'].value,
-          description: this.form.controls['description'].value,
           id: this.form.controls['id'].value,
-          user: this.lg.sDataUser.email,
-          date: this.now.toLocaleDateString(),        
-          songs: []
+          title: this.form.controls['title'].value,
+          user: this.authService.currentUser?.email,
+          date: this.now.toLocaleDateString(),  
+          songs: [],      
+          description: this.form.controls['description'].value,
       };
       this.lg.postList(list);
     }

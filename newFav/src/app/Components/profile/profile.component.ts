@@ -12,22 +12,28 @@ import { ListGeneratorService } from 'app/Services/list-generator.service';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css'],
 })
-
-
 export class ProfileComponent implements OnInit {
+  selectedOption: string = '';
+
+  selectOption(option: string) {
+    this.selectedOption = option;
+  }
 
   dataUser: any;
   rockList: any[] = [];
   popList: any[] = [];
   hipHopList: any[] = [];
-  
+
   pis: any | undefined;
   url: string = 'https://open.spotify.com/track/';
   urlPlay: string = 'https://open.spotify.com/playlist/';
   recomToday: any | undefined;
 
   list: Lista[] | undefined;
-  saveTo: number | undefined;
+
+  saveTo: number = -1;
+  saveTitle: string | undefined;
+  saveSong: string | undefined;
 
   Aries: string = '';
   Tauro: string = '';
@@ -48,7 +54,6 @@ export class ProfileComponent implements OnInit {
   gym: string = '';
   clean: string = '';
 
-
   constructor(
     private afAuth: AngularFireAuth,
     private router: Router,
@@ -63,12 +68,18 @@ export class ProfileComponent implements OnInit {
     this.afAuth.currentUser.then((user) => {
       if (user && user.emailVerified) {
         this.dataUser = user;
-        this.lg.sDataUser = user;
         console.log(user);
       } else {
         this.router.navigate(['/login']);
       }
     });
+  }
+
+  toSave(option: Lista, song: string) {
+    this.saveTo = option.id;
+    option.songs.push(song);
+    this.saveToList(option);
+    alert("La cansion ha sido guardado ╰（‵□′）╯")
   }
 
   async populateAll() {
@@ -91,7 +102,6 @@ export class ProfileComponent implements OnInit {
     }
   }
 
-
   async popuHoros() {
     try {
       this.Aries = this.url + (await this.gai.getAries());
@@ -111,7 +121,6 @@ export class ProfileComponent implements OnInit {
     }
   }
 
-
   async popuMood() {
     try {
       this.sad = this.urlPlay + (await this.gai.getSad());
@@ -124,29 +133,25 @@ export class ProfileComponent implements OnInit {
       console.log(error);
     }
   }
+
   async storeLists() {
-    this.list = await this.lg.getLists(this.dataUser.email);
-   this.lg.sList = this.list;
+    if (this.getUser?.email != undefined) {
+      this.list = await this.lg.getLists(this.getUser?.email);
+      this.lg.sList = this.list;
+    }
   }
-  async createList(){
 
-  }
-
-  get getUser():User | undefined{
+  get getUser(): User | undefined {
     return this.authService.currentUser;
+  }
 
-
-
-  // async saveToList(id: number) {
-  //   if (this.list != undefined) {
-  //     await this.lg.putList(this.list[id]);
-  //   }
-  // }
-
+  async saveToList(lista: Lista) {
+    if (this.list != undefined) {
+      await this.lg.putList(lista);
+    }
+  }
 
   // logOut() {
   //   this.afAuth.signOut().then(() => this.router.navigate(['/login']));
   // }
-  }
 }
-

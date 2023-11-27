@@ -2,68 +2,116 @@
 
 <div class="containerALTO">
   <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-    <h1 class="display-4 fw-normal"> <strong> Bienvenido a New Fav </strong> </h1>
+    <h1 class="display-4 fw-normal"><strong> Bienvenido a New Fav </strong></h1>
     <p class="usuario">¡ {{ getUser?.user }} !</p>
-    <p class="leadDescription ">Welcome to New Fav, a cutting-edge social network designed for
-        enthusiasts of all things entertainment. New Fav sets itself apart by initially focusing on the world of music,
-        allowing users to seamlessly share and enjoy their favorite tunes with friends. Our platform provides a dynamic
-        and immersive environment for music lovers to connect, discover, and amplify their passion. </p>
+    <p class="leadDescription">
+      Welcome to New Fav, a cutting-edge social network designed for enthusiasts
+      of all things entertainment. New Fav sets itself apart by initially
+      focusing on the world of music, allowing users to seamlessly share and
+      enjoy their favorite tunes with friends. Our platform provides a dynamic
+      and immersive environment for music lovers to connect, discover, and
+      amplify their passion.
+    </p>
     <div class="cancionRecomendada">
       <div class="image-container">
-        <img src="{{recomToday.track.album.images[1].url}}" alt="Imagen">
+        <img src="{{ recomToday.track.album.images[1].url }}" alt="Imagen" />
       </div>
       <div class="text-container">
         <h5><strong>Cancion recomendada</strong></h5>
         <p>
           {{ recomToday.track.name }} <br />{{
-          recomToday.track.artists[0].name
-          }} </p>
-        <a href="{{'https://open.spotify.com/track/' + recomToday.track.id}}" target=”_blank” class="button-recomendada">Listen</a>
+            recomToday.track.artists[0].name
+          }}
+        </p>
+        <a
+          href="{{ 'https://open.spotify.com/track/' + recomToday.track.id }}"
+          target="”_blank”"
+          class="button-recomendada"
+          >Listen</a
+        >
       </div>
     </div>
   </div>
 
   <section class="arribita pricing-header p-3 pb-md-4 mx-auto text-center">
     <div class="fellings col-lg-6 col-md-8 mx-auto row py-lg-5">
-      <h2 class="fw-light"> <strong> Como se siente: </strong> </h2>
-      <p class="lead text-body-secondary">Seleccione su mood. </p>
-      <p>
+      <h2 class="fw-light"><strong> Como se siente: </strong></h2>
+      <p class="lead text-body-secondary">Seleccione su mood.</p>
+      <p></p>
       <div class="containerUNO">
         <!-- Fila 1 -->
-        <a href="{{sad}}" target=”_blank” class="button-containerUNO">Sad</a>
-        <a href="{{chill}}" target=”_blank” class="button-containerUNO">Chill</a>
-        <a href="{{happy}}" target=”_blank” class="button-containerUNO">Alegría</a>
+        <a href="{{ sad }}" target="”_blank”" class="button-containerUNO"
+          >Sad</a
+        >
+        <a href="{{ chill }}" target="”_blank”" class="button-containerUNO"
+          >Chill</a
+        >
+        <a href="{{ happy }}" target="”_blank”" class="button-containerUNO"
+          >Alegría</a
+        >
         <!-- Fila 2 -->
-        <a href="{{walk}}" target=”_blank” class="button-containerUNO">Caminar</a>
-        <a href="{{gym}}" target=”_blank” class="button-containerUNO">Gym</a>
-        <a href="{{clean}}" target=”_blank” class="button-containerUNO">Limpiar</a>
-
+        <a href="{{ walk }}" target="”_blank”" class="button-containerUNO"
+          >Caminar</a
+        >
+        <a href="{{ gym }}" target="”_blank”" class="button-containerUNO"
+          >Gym</a
+        >
+        <a href="{{ clean }}" target="”_blank”" class="button-containerUNO"
+          >Limpiar</a
+        >
       </div>
     </div>
     <div class="horoscopo col-lg-6 col-md-8 mx-auto row py-lg-5">
-      <h2 class="fw-light"> <strong>Horoscopo</strong> </h2>
-      <p class="lead text-body-secondary">Seleccione su horoscopo. </p>
+      <h2 class="fw-light"><strong>Horoscopo</strong></h2>
+      <p class="lead text-body-secondary">Seleccione su horoscopo.</p>
       <div class="containerDOS">
         <!-- Fila 1 -->
-        <a href="{{Aries}}" target=”_blank” class="button-containerDOS">Aries</a>
-        <a href="{{Tauro}}" target=”_blank” class="button-containerDOS">Tauro</a>
-        <a href="{{Geminis}}" target=”_blank” class="button-containerDOS">Géminis</a>
+        <a href="{{ Aries }}" target="”_blank”" class="button-containerDOS"
+          >Aries</a
+        >
+        <a href="{{ Tauro }}" target="”_blank”" class="button-containerDOS"
+          >Tauro</a
+        >
+        <a href="{{ Geminis }}" target="”_blank”" class="button-containerDOS"
+          >Géminis</a
+        >
 
         <!-- Fila 2 -->
-        <a href="{{Cancer}}" target=”_blank” class="button-containerDOS">Cáncer</a>
-        <a href="{{Leo}}" target=”_blank” class="button-containerDOS">Leo</a>
-        <a href="{{Virgo}}" target=”_blank” class="button-containerDOS">Virgo</a>
+        <a href="{{ Cancer }}" target="”_blank”" class="button-containerDOS"
+          >Cáncer</a
+        >
+        <a href="{{ Leo }}" target="”_blank”" class="button-containerDOS"
+          >Leo</a
+        >
+        <a href="{{ Virgo }}" target="”_blank”" class="button-containerDOS"
+          >Virgo</a
+        >
 
         <!-- Fila 3 -->
-        <a href="{{Piscis}}" target=”_blank” class="button-containerDOS">Piscis</a>
-        <a href="{{Libra}}" target=”_blank” class="button-containerDOS">Libra</a>
-        <a href="{{Escorpio}}" target=”_blank” class="button-containerDOS">Escorpión</a>
+        <a href="{{ Piscis }}" target="”_blank”" class="button-containerDOS"
+          >Piscis</a
+        >
+        <a href="{{ Libra }}" target="”_blank”" class="button-containerDOS"
+          >Libra</a
+        >
+        <a href="{{ Escorpio }}" target="”_blank”" class="button-containerDOS"
+          >Escorpión</a
+        >
         <!-- Fila 4 -->
-        <a href="{{Sagitario}}" target=”_blank” class="button-containerDOS">Sagitario</a>
-        <a href="{{Capricornio}}" target=”_blank” class="button-containerDOS">Capricornio</a>
-        <a href="{{Acuario}}" target=”_blank” class="button-containerDOS">Acuario</a>
+        <a href="{{ Sagitario }}" target="”_blank”" class="button-containerDOS"
+          >Sagitario</a
+        >
+        <a
+          href="{{ Capricornio }}"
+          target="”_blank”"
+          class="button-containerDOS"
+          >Capricornio</a
+        >
+        <a href="{{ Acuario }}" target="”_blank”" class="button-containerDOS"
+          >Acuario</a
+        >
       </div>
-      <p>
+      <p></p>
     </div>
   </section>
 </div>
@@ -72,34 +120,49 @@
 
 <h3 class="musicNAME">Rock</h3>
 <section class="recoGenero">
-  <div class="album ">
+  <div class="album">
     <div class="containerTres">
       <div class="col">
         <div class="card">
-          <img class="img" src="{{rockList[0].track.album.images[1].url}}" />
+          <img class="img" src="{{ rockList[0].track.album.images[1].url }}" />
           <div class="card-body">
             <p class="card-text">
               {{ rockList[0].track.name }} <br />{{
-              rockList[0].track.artists[0].name
+                rockList[0].track.artists[0].name
               }}
-
             </p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <a href="{{'https://open.spotify.com/track/' + rockList[0].track.id}}"
-                  target=”_blank”
-                  class="btn btn-sm btn-outline-secondary">
+                <a
+                  href="{{
+                    'https://open.spotify.com/track/' + rockList[0].track.id
+                  }}"
+                  target="”_blank”"
+                  class="btn btn-sm btn-outline-secondary"
+                >
                   Listen
                 </a>
-                <div class="add-playlists-btn">
-                  <button class="btn btn-sm btn-outline-secondary rounded-pill" id="addPlaylistsBtn">
-                    Add Playlists
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    {{ saveTitle || "Guardar a playlist" }}
                   </button>
-                  <div class="options-container" id="optionsContainer">
-                    <!-- Contenido de las opciones -->
-                    <a href="#" class="option">Option 1</a>
-                    <a href="#" class="option">Option 2</a>
-                    <a href="#" class="option">Option 3</a>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a
+                      class="dropdown-item"
+                      *ngFor="let option of list"
+                      (click)="toSave(option, rockList[0].track.id)"
+                      >{{ option.title }}</a
+                    >
                   </div>
                 </div>
               </div>
@@ -108,27 +171,53 @@
         </div>
       </div>
     </div>
-  </div>  
+  </div>
 
   <div class="album">
     <div class="containerTres">
       <div class="col">
         <div class="card">
-          <img class="img" src="{{rockList[1].track.album.images[1].url}}" />
+          <img class="img" src="{{ rockList[1].track.album.images[1].url }}" />
           <div class="card-body">
             <p class="card-text">
               {{ rockList[1].track.name }} <br />{{
-              rockList[1].track.artists[0].name
+                rockList[1].track.artists[0].name
               }}
-
             </p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <a href="{{'https://open.spotify.com/track/' + rockList[1].track.id}}"
-                  target=”_blank”
-                  class="btn btn-sm btn-outline-secondary">
+                <a
+                  href="{{
+                    'https://open.spotify.com/track/' + rockList[1].track.id
+                  }}"
+                  target="”_blank”"
+                  class="btn btn-sm btn-outline-secondary"
+                >
                   Listen
                 </a>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    {{ saveTitle || "Guardar a playlist" }}
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a
+                      class="dropdown-item"
+                      *ngFor="let option of list"
+                      (click)="toSave(option, rockList[1].track.id)"
+                      >{{ option.title }}</a
+                    >
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -141,20 +230,47 @@
     <div class="containerTres">
       <div class="col">
         <div class="card">
-          <img class="img" src="{{rockList[2].track.album.images[1].url}}" />
+          <img class="img" src="{{ rockList[2].track.album.images[1].url }}" />
           <div class="card-body">
             <p class="card-text">
               {{ rockList[2].track.name }} <br />{{
-              rockList[2].track.artists[0].name
+                rockList[2].track.artists[0].name
               }}
             </p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <a href="{{'https://open.spotify.com/track/' + rockList[2].track.id}}"
-                  target=”_blank”
-                  class="btn btn-sm btn-outline-secondary">
+                <a
+                  href="{{
+                    'https://open.spotify.com/track/' + rockList[2].track.id
+                  }}"
+                  target="”_blank”"
+                  class="btn btn-sm btn-outline-secondary"
+                >
                   Listen
                 </a>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    {{ saveTitle || "Guardar a playlist" }}
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a
+                      class="dropdown-item"
+                      *ngFor="let option of list"
+                      (click)="toSave(option, rockList[2].track.id)"
+                      >{{ option.title }}</a
+                    >
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -164,53 +280,53 @@
   </div>
 </section>
 
-
-<h3 class="musicNAME ">Pop</h3>
+<h3 class="musicNAME">Pop</h3>
 <section class="recoGenero">
-  <div class="album ">
+  <div class="album">
     <div class="containerTres">
       <div class="col">
         <div class="card">
-          <img class="img" src="{{popList[0].track.album.images[1].url}}" />
+          <img class="img" src="{{ popList[0].track.album.images[1].url }}" />
           <div class="card-body">
             <p class="card-text">
               {{ popList[0].track.name }} <br />{{
-              popList[0].track.artists[0].name
+                popList[0].track.artists[0].name
               }}
             </p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <a href="{{'https://open.spotify.com/track/' + popList[0].track.id}}"
-                  target=”_blank”
-                 class="btn btn-sm btn-outline-secondary">
+                <a
+                  href="{{
+                    'https://open.spotify.com/track/' + popList[0].track.id
+                  }}"
+                  target="”_blank”"
+                  class="btn btn-sm btn-outline-secondary"
+                >
                   Listen
                 </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>  
-
-  <div class="album ">
-    <div class="containerTres">
-      <div class="col">
-        <div class="card">
-          <img class="img" src="{{popList[1].track.album.images[1].url}}" />
-          <div class="card-body">
-            <p class="card-text">
-              {{ popList[1].track.name }} <br />{{
-              popList[1].track.artists[0].name
-              }}
-            </p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <a href="{{'https://open.spotify.com/track/' + popList[1].track.id}}"
-                  target=”_blank”
-                  class="btn btn-sm btn-outline-secondary">
-                  Listen
-                </a>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    {{ saveTitle || "Guardar a playlist" }}
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a
+                      class="dropdown-item"
+                      *ngFor="let option of list"
+                      (click)="toSave(option, popList[0].track.id)"
+                      >{{ option.title }}</a
+                    >
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -223,20 +339,100 @@
     <div class="containerTres">
       <div class="col">
         <div class="card">
-          <img class="img" src="{{popList[2].track.album.images[1].url}}" />
+          <img class="img" src="{{ popList[1].track.album.images[1].url }}" />
           <div class="card-body">
             <p class="card-text">
-              {{ popList[2].track.name }} <br />{{
-              popList[2].track.artists[0].name
+              {{ popList[1].track.name }} <br />{{
+                popList[1].track.artists[0].name
               }}
             </p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <a href="{{'https://open.spotify.com/track/' + popList[2].track.id}}"
-                  target=”_blank”
-                  class="btn btn-sm btn-outline-secondary">
+                <a
+                  href="{{
+                    'https://open.spotify.com/track/' + popList[1].track.id
+                  }}"
+                  target="”_blank”"
+                  class="btn btn-sm btn-outline-secondary"
+                >
                   Listen
                 </a>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    {{ saveTitle || "Guardar a playlist" }}
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a
+                      class="dropdown-item"
+                      *ngFor="let option of list"
+                      (click)="toSave(option, popList[1].track.id)"
+                      >{{ option.title }}</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="album">
+    <div class="containerTres">
+      <div class="col">
+        <div class="card">
+          <img class="img" src="{{ popList[2].track.album.images[1].url }}" />
+          <div class="card-body">
+            <p class="card-text">
+              {{ popList[2].track.name }} <br />{{
+                popList[2].track.artists[0].name
+              }}
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a
+                  href="{{
+                    'https://open.spotify.com/track/' + popList[2].track.id
+                  }}"
+                  target="”_blank”"
+                  class="btn btn-sm btn-outline-secondary"
+                >
+                  Listen
+                </a>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    {{ saveTitle || "Guardar a playlist" }}
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a
+                      class="dropdown-item"
+                      *ngFor="let option of list"
+                      (click)="toSave(option, popList[2].track.id)"
+                      >{{ option.title }}</a
+                    >
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -246,28 +442,56 @@
   </div>
 </section>
 
-
-
-<h3 class="musicNAME ">Hip Hop</h3>
+<h3 class="musicNAME">Hip Hop</h3>
 <section class="recoGenero">
   <div class="album">
     <div class="containerTres">
       <div class="col">
         <div class="card">
-          <img class="img" src="{{hipHopList[0].track.album.images[1].url}}" />
+          <img
+            class="img"
+            src="{{ hipHopList[0].track.album.images[1].url }}"
+          />
           <div class="card-body">
             <p class="card-text">
               {{ hipHopList[0].track.name }} <br />{{
-              hipHopList[0].track.artists[0].name
+                hipHopList[0].track.artists[0].name
               }}
             </p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <a href="{{'https://open.spotify.com/track/' + hipHopList[0].track.id}}"
-                   target=”_blank”
-                  class="btn btn-sm btn-outline-secondary">
+                <a
+                  href="{{
+                    'https://open.spotify.com/track/' + hipHopList[0].track.id
+                  }}"
+                  target="”_blank”"
+                  class="btn btn-sm btn-outline-secondary"
+                >
                   Listen
                 </a>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    {{ saveTitle || "Guardar a playlist" }}
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a
+                      class="dropdown-item"
+                      *ngFor="let option of list"
+                      (click)="toSave(option, hipHopList[0].track.id)"
+                      >{{ option.title }}</a
+                    >
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -276,24 +500,54 @@
     </div>
   </div>
 
-  <div class="album ">
+  <div class="album">
     <div class="containerTres">
       <div class="col">
         <div class="card">
-          <img class="img" src="{{hipHopList[1].track.album.images[1].url}}" />
+          <img
+            class="img"
+            src="{{ hipHopList[1].track.album.images[1].url }}"
+          />
           <div class="card-body">
             <p class="card-text">
               {{ hipHopList[1].track.name }} <br />{{
-              hipHopList[1].track.artists[0].name
+                hipHopList[1].track.artists[0].name
               }}
             </p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <a href="{{'https://open.spotify.com/track/' + hipHopList[1].track.id}}"
-                  target=”_blank”
-                  class="btn btn-sm btn-outline-secondary">
+                <a
+                  href="{{
+                    'https://open.spotify.com/track/' + hipHopList[1].track.id
+                  }}"
+                  target="”_blank”"
+                  class="btn btn-sm btn-outline-secondary"
+                >
                   Listen
                 </a>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    {{ saveTitle || "Guardar a playlist" }}
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a
+                      class="dropdown-item"
+                      *ngFor="let option of list"
+                      (click)="toSave(option, hipHopList[1].track.id)"
+                      >{{ option.title }}</a
+                    >
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -302,24 +556,54 @@
     </div>
   </div>
 
-  <div class="album ">
+  <div class="album">
     <div class="containerTres">
       <div class="col">
         <div class="card">
-          <img class="img" src="{{hipHopList[2].track.album.images[1].url}}" />
+          <img
+            class="img"
+            src="{{ hipHopList[2].track.album.images[1].url }}"
+          />
           <div class="card-body">
             <p class="card-text">
               {{ hipHopList[2].track.name }} <br />{{
-              hipHopList[2].track.artists[0].name
+                hipHopList[2].track.artists[0].name
               }}
             </p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <a href="{{'https://open.spotify.com/track/' + hipHopList[2].track.id}}"
-                  target=”_blank”
-                  class="btn btn-sm btn-outline-secondary">
+                <a
+                  href="{{
+                    'https://open.spotify.com/track/' + hipHopList[2].track.id
+                  }}"
+                  target="”_blank”"
+                  class="btn btn-sm btn-outline-secondary"
+                >
                   Listen
                 </a>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    {{ saveTitle || "Guardar a playlist" }}
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a
+                      class="dropdown-item"
+                      *ngFor="let option of list"
+                      (click)="toSave(option, hipHopList[2].track.id)"
+                      >{{ option.title }}</a
+                    >
+                  </div>
+                </div>
               </div>
             </div>
           </div>

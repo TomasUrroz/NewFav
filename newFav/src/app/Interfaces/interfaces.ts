@@ -138,7 +138,7 @@ export interface User{
 export interface Lista {
     id: number,
     title: string,
-    user: string,
+    user?: string,
     date: string,
     songs: string[],
     description: string

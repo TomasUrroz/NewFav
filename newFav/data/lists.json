@@ -1,0 +1,30 @@
+{
+  "lists": [
+    {
+      "id": 1,
+      "title": "xd",
+      "user": "tomas@hotmail.com",
+      "date": "11/26/2023",
+      "songs": [
+        "3YRCqOhFifThpSRFJ1VWFM",
+        "1UBQ5GK8JaQjm5VbkBZY66"
+      ],
+      "description": "xddd"
+    },
+    {
+      "id": 2,
+      "title": "damn",
+      "user": "tomas@hotmail.com",
+      "date": "11/26/2023",
+      "songs": [
+        "",
+        "5AEOqLsRJFAoSS4ay4Jzao",
+        "3KhF2YiNpJvGpfiCW45R6D",
+        "0nLiqZ6A27jJri2VCalIUs",
+        "7ornLs8NlxZ95IDWTyBIEj",
+        "3YRCqOhFifThpSRFJ1VWFM"
+      ],
+      "description": "daaaaaaaaaaamn"
+    }
+  ]
+}
