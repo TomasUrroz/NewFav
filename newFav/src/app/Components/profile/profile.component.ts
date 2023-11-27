@@ -146,6 +146,7 @@ export class ProfileComponent implements OnInit {
   async saveToList(lista: Lista) {
     if (this.list != undefined) {
       await this.lg.putList(lista);
+      alert("La cansion ha sido guardada  ╰（‵□′）╯");
     }
   }
 

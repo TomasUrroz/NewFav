@@ -65,7 +65,6 @@ export class ListGeneratorService implements OnInit{
           headers: { 'Content-type': 'application/json' }
         }
       )
-      alert("La cansion ha sido guardada  ╰（‵□′）╯");
     } catch (error) {
       console.log(error)
     }
