@@ -79,26 +79,34 @@ export class ProfileComponent implements OnInit {
     this.saveTo = option.id;
     const newSong: Song = {
       id: song.track.id,
-      name:song.track.name, 
+      name: song.track.name,
       artist: song.track.artists[0].name,
-      imageUrl: song.track.album.images[1].url,      
-    }
+      imageUrl: song.track.album.images[1].url,
+    };
     option.songs.push(newSong);
     this.saveToList(option);
   }
 
   async populateAll() {
-    this.popuLists(3);
-    this.popuHoros();
-    this.popuMood();
-    this.storeLists();
+    try {
+      this.popuLists(3);
+      this.popuHoros();
+      this.popuMood();
+      this.storeLists();
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   async popuLists(x: number) {
-    this.recomToday = await this.gai.getTop50();
-    this.rockList = await this.gai.getRock();
-    this.popList = await this.gai.getPop();
-    this.hipHopList = await this.gai.getHipHop();
+    try {
+      this.recomToday = await this.gai.getTop50();
+      this.rockList = await this.gai.getRock();
+      this.popList = await this.gai.getPop();
+      this.hipHopList = await this.gai.getHipHop();
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   async popuHoros() {
@@ -146,7 +154,7 @@ export class ProfileComponent implements OnInit {
   async saveToList(lista: Lista) {
     if (this.list != undefined) {
       await this.lg.putList(lista);
-      alert("La cansion ha sido guardada  ╰（‵□′）╯");
+      alert('La cansion ha sido guardada  ╰（‵□′）╯');
     }
   }
 

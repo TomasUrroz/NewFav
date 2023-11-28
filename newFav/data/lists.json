@@ -107,9 +107,36 @@
           "name": "Aerials",
           "artist": "System Of A Down",
           "imageUrl": "https://i.scdn.co/image/ab67616d00001e0230d45198d0c9e8841f9a9578"
+        },
+        {
+          "id": "1hlveB9M6ijHZRbzZ2teyh",
+          "name": "We're Not Gonna Take It",
+          "artist": "Twisted Sister",
+          "imageUrl": "https://i.scdn.co/image/ab67616d00001e023469ef94acfa666fde83dec5"
         }
       ],
       "description": "xd"
+    },
+    {
+      "id": 4,
+      "title": "jjj",
+      "user": "thomito@xd.com",
+      "date": "11/27/2023",
+      "songs": [
+        {
+          "id": "6uIIdjYTxxpWOyWuVXrKQO",
+          "name": "Que Onda",
+          "artist": "Calle 24",
+          "imageUrl": "https://i.scdn.co/image/ab67616d00001e02c8fd4190e32eed2dfcd00f66"
+        },
+        {
+          "id": "5UKeFkVeUfvP6S43I8s9mt",
+          "name": "Jailbreak",
+          "artist": "AC/DC",
+          "imageUrl": "https://i.scdn.co/image/ab67616d00001e0210bf017ea10a0887469e2763"
+        }
+      ],
+      "description": "jjj"
     }
   ]
 }
