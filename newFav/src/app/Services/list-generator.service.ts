@@ -49,8 +49,7 @@ export class ListGeneratorService implements OnInit{
       await fetch(`${this.url}/${id}`,
         { method: 'DELETE' }
       )
-      //habria que cambiar aca a la direccion de donde este la lista
-      window.location.href = 'playlist.html'
+      window.location.href = 'index.html'
     } catch (error) {
       alert(error)
     }
