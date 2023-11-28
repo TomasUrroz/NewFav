@@ -1,21 +1,14 @@
 <!-- <header class="  d-flex flex-wrap align-items-center justify-content-start justify-content-md-between py-3 mb-4 border-bottom"> -->
-  <header class=" bg-body-tertiary d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"> 
-  <div class="col-md-3 mb-2 mb-md-0">
-    <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-      <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-    </a>
-  </div>
-
-  <ul class="nav col-12 col-md-auto mb-2 justify-content-start mb-md-0">
-    <li><a href="/profile" class="nav-link px-2 link-secondary">Profile</a></li>
-    <li><a href="/playlist" class="nav-link px-2">Playlist</a></li>
-    <li><a href="/new-playlist" class="nav-link px-2">New Playlist</a></li>
-    <li><a href="/features" class="nav-link px-2">Future Features</a></li>
-    <li><a href="/about" class="nav-link px-2">About</a></li>
+<header class="nav-bar"> 
+  <ul class="nav-buttons">
+    <li><a class="btn-nav" href="/profile" >Profile</a></li>
+    <li><a class="btn-nav" href="/playlist" >Playlist</a></li>
+    <li><a class="btn-nav" href="/new-playlist" >New Playlist</a></li>
+    <li><a class="btn-nav" href="/features" >Future Features</a></li>
+    <li><a class="btn-nav" href="/about" >About</a></li>
   </ul>
-
-  <div class="col-md-3 text-end">
-    <button type="button" class="btn btn-outline-primary me-2" (click)="logOut()">LogOut</button>
+  <div>
+    <button type="button" class="logout-btn" (click)="logOut()">LogOut</button>
   </div>
 </header>
 

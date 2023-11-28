@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px; 
     color: white; 
     background-color: #171c32;
   }

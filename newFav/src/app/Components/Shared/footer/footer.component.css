@@ -1,29 +1,26 @@
 footer {
-    background-color: #212529;
-    padding: 10px;
+    background-color: #0f1020d7;
+    padding: 2rem;
     text-align: center;
     width: 100%;
-    bottom: 0;
 }
 
 footer p {
-    margin: 0;
-    font-size: 14px;
+    font-size: 2rem;
 }
 
 footer ul {
     list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
 }
 
 footer ul li {
-    margin: 0 10px;
+    margin: 0 2rem;
 }
 
 footer a {
     color: #fff;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 1.4rem;
 }
