@@ -1,13 +1,13 @@
 <app-nav-bar></app-nav-bar>
 <section class="contenedora">
-  <h2>Playlist</h2>
+  <h2>PLAYLISTS</h2>
   <div class="playlists-container" *ngFor="let item of list">
     <div class="playlist-title">
-      <h3 class="music-name">{{item.title}}</h3>
-      <p>
+      <h3 class="playlist-name">{{item.title}}</h3>
+      <p class="playlist-desc">
       {{item.description}}
       </p>
-      <a class="delete-playlist-btn" (click)="deletePlaylist(item.id)">Delete Playlist</a>
+      <a class="delete-playlist-btn btn" (click)="deletePlaylist(item.id)">Delete Playlist</a>
     </div>
     <div class="albumes">
       <div class="song-padre" *ngFor="let song of item.songs">
@@ -25,11 +25,11 @@
               'https://open.spotify.com/track/' + song.id
             }}"
             target="”_blank”"
-            class="spotify-btn"
+            class="spotify-btn btn-2"
           >
             Listen
           </a>
-          <a (click)="deleteSong(item.id ,song.id)">Remove Song</a>
+          <a class="spotify-btn btn-2" (click)="deleteSong(item.id ,song.id)">Remove</a>
       </div>
       </div>
     </div>

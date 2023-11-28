@@ -8,46 +8,55 @@
     color: white; 
     background-color: #171c32;
   }
-  
-  table {
-    border-collapse: collapse;
-    width: 80%; 
-    margin-top: 20px; 
-    border-radius: 10px; 
-    overflow: hidden;
+  .btn{
+    background-color: #14162b;
   }
-
-  button {
-    padding: 5px 10px;
-    background-color: #8d7a77; 
-    color: white;
-    border: none;
+  .btn:hover{
+    background-color: #2b1d41;
+  }
+  .btn-2{
+    background-color: #1b192f;
     cursor: pointer;
   }
-  
-  button:hover {
-    background-color: #cc0000;  
+  .btn-2:hover{
+    background-color: #2b1d41;
+  }
+  .spotify-btn{
+    padding: .4rem;
+    color: rgba(255, 255, 255, 0.74);
+    border-radius: 0.5rem;
+    width: 40%;
+    text-align: center;
+    font-size: 1.1rem;
   }
 
+
 h2{
-    font-family: 'Bebas Neue', sans-serif;
-    font-family: 'Permanent Marker', cursive;
-    margin: 1.5rem;
-    font-size: 3.5rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 100;
+    letter-spacing: .5rem;
+    margin: 3.5rem;
+    font-size: 4rem;
+    opacity: .7;
 }
 
 .playlist-title{
   display: flex;
   flex-direction: column;
-  width: 15rem;
+  width: 23rem;
   height: 100%;
   text-align: center;
   align-items: center;
   background-color: #1b192f;
   border-radius: 4rem 0rem 0rem 4rem;
 }
-.music-name{
+.playlist-name{
   margin-top: 7rem;
+  font-weight: 100;
+  font-size: 2.5rem;
+}
+.playlist-desc{
+  font-size: 1.5rem;
 }
 
 .containerALTO {
@@ -58,7 +67,6 @@ h2{
   background-position: center;
   background-repeat: no-repeat; 
 }
-
 .leadDescription{
 display: flex;
 align-items: center;
@@ -77,16 +85,7 @@ margin-bottom: 20px;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
-.cancionRecomendada {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px auto;
-  max-width: 600px; 
-  backdrop-filter: blur(8px); 
-}
+
 
 .image-container {
   flex: 0 0 150px; 
@@ -170,31 +169,40 @@ margin-bottom: 20px;
   display: flex;
   width: 100%;
   height: 100%;
+  
   overflow-x: auto;
 }
 
-.albumes ::-webkit-scrollbar{
-  width: 0;
-}
+
 
 
 .song-padre{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0rem 1rem 0rem 1rem;
-  width: 30%;
+  margin: 1.5rem 1rem 0rem 1rem;
+  width: 20rem;
+}
+.song-card{
+  width: 100%;
+  height: 8rem;
 }
 .song-info{
+  padding-top: 12%;
   text-align: center;
+  font-size: 1.2rem;
+  color:rgba(255, 255, 255, 0.74)
 }
-.btn-group {
+
+.btn-div{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  margin-top: 1rem;
+  width: 15rem;
+  justify-content: space-around;
 }
 .img {
-  width: 14rem;
+  width: 12.5rem;
   border-radius: 10%;
   margin-top: 1.5rem;
 }
@@ -217,18 +225,16 @@ margin-bottom: 20px;
   background-color: #45505c;
 }
 .delete-playlist-btn{
+  position:absolute;
   text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-  background-color: #14162b;
-  width: 70%;
-  padding: 0.6rem;
-  border-radius: 0.5rem;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 1.15rem;
+  width: 10rem;
+  padding: 0.7rem;
+  border-radius: 0.6rem;
+  margin-top: 22rem;
 }
-.delete-playlist-btn:hover{
-  cursor:pointer;
-  background-color: #1e1427;
-}
+
 h3{
   margin: 20px;
   align-items: center;
@@ -242,8 +248,8 @@ h3{
   flex-direction: row;
   margin-bottom: 9rem;
   border: #14162b solid 0.1rem;
-  width:65%;
-  height: 24rem;
+  width:80%;
+  height: 30rem;
   background-color:#14162b;
   border-radius: 4rem;
 
