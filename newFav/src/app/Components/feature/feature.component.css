@@ -1,26 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&display=swap');
+.features{
+  height: 75rem;
+}
+
 .container {
-    
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 1rem 1rem 2rem 1rem;
     border: 1px solid #ccc;
     border-radius: 10px;
     margin: 20px auto;
     max-width: 60%;
     max-height: 90%;
     backdrop-filter: blur(8px); 
-    background-color: rgba(154, 155, 158, 0.8);
+    background-color: #6d7bafb6;
   }
 
   .container p {
     margin: 0; 
     text-align: center;
-    /*  text-align: justify;*/
+    font-size: 1.5rem;
   }
-  h1, h4{
-    margin-top: 20px;
+ h4{
+    margin-top: 1rem;
     text-align: center;
+    font-size: 2rem;
+  }
+  h1{
     font-family: 'Bebas Neue', sans-serif;
-    font-family: 'Permanent Marker', cursive;
+    font-weight: 100;
+      letter-spacing: .5rem;
+      margin: 4rem;
+      font-size: 4rem;
+      opacity: .7;
+      text-align: center;
   }
