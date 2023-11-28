@@ -49,7 +49,7 @@ export class ListGeneratorService implements OnInit{
       await fetch(`${this.url}/${id}`,
         { method: 'DELETE' }
       )
-      window.location.href = 'index.html'
+      window.location.href = 'profile';
     } catch (error) {
       alert(error)
     }
