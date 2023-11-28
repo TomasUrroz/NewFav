@@ -10,11 +10,9 @@ import { ToastrModule } from 'ngx-toastr';
 
 //Componentes
 import { AppComponent } from './app.component';
-import { HomeComponent } from './Components/home/home.component';
 import { ProfileComponent } from './Components/profile/profile.component';
 import { NavBarComponent } from './Components/Shared/nav-bar/nav-bar.component';
 import { FooterComponent } from './Components/Shared/footer/footer.component';
-import { HomePageComponent } from './Pages/home-page/home-page.component';
 import { LoginComponent } from './Components/login-Componentes/login/login.component';
 import { RegistrarUsuarioComponent } from './Components/login-Componentes/registrar-usuario/registrar-usuario.component';
 import { SpinnerComponent } from './Components/Shared/spinner/spinner.component';
@@ -25,16 +23,19 @@ import { FeaturesPageComponent } from './Pages/features-page/features-page.compo
 import { HttpClientModule } from '@angular/common/http';
 import { PlaylistComponent } from './Components/playlist/playlist.component';
 import { NewPlaylistComponent } from './Components/new-playlist/new-playlist.component';
+import { PlaylistPageComponent } from './Pages/playlist-page/playlist-page.component';
+import { ProfilePageComponent } from './Pages/profile-page/profile-page.component';
+import { AboutComponent } from './Components/about/about.component';
+import { FeatureComponent } from './Components/feature/feature.component';
+import { NewPlaylistPageComponent } from './Pages/new-playlist-page/new-playlist-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     ProfileComponent,
     NavBarComponent,
     FooterComponent,
-    HomePageComponent,
     LoginComponent,
     RegistrarUsuarioComponent,
     SpinnerComponent,
@@ -42,7 +43,12 @@ import { NewPlaylistComponent } from './Components/new-playlist/new-playlist.com
     AboutPagesComponent,
     FeaturesPageComponent,
     PlaylistComponent,
-    NewPlaylistComponent
+    NewPlaylistComponent,
+    PlaylistPageComponent,
+    ProfilePageComponent,
+    AboutComponent,
+    FeatureComponent,
+    NewPlaylistPageComponent
   ],
   imports: [
     BrowserModule,
