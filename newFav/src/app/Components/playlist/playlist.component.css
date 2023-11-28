@@ -8,19 +8,7 @@
     color: white; 
     background-color: #171c32;
   }
-  .btn{
-    background-color: #14162b;
-  }
-  .btn:hover{
-    background-color: #2b1d41;
-  }
-  .btn-2{
-    background-color: #1b192f;
-    cursor: pointer;
-  }
-  .btn-2:hover{
-    background-color: #2b1d41;
-  }
+  
   .spotify-btn{
     padding: .4rem;
     color: rgba(255, 255, 255, 0.74);

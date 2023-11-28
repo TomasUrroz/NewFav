@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@100;500&display=swap');*{
     font-family: 'Raleway', sans-serif;
 }
+
 html{ 
     margin: 0;
     box-sizing: border-box;
@@ -54,7 +55,24 @@ a{
     text-decoration: none;
 }
 
+.btn{
+    background-color: #14162b;
+    cursor: pointer;
+    border: none;
 
+  }
+  .btn:hover{
+    background-color: #2b1d41;
+  }
+  .btn-2{
+    background-color: #1b192f;
+    cursor: pointer;
+    border: none;
+
+  }
+  .btn-2:hover{
+    background-color: #2b1d41;
+  }
 
 
 

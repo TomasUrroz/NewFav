@@ -1,20 +1,22 @@
 <app-nav-bar></app-nav-bar>
-<section>
+<section class="new-playlist-section">
+  <div class="form-container">
   <fieldset>
     <legend>Nueva Lista</legend>
     <form id="form" [formGroup]="form" (ngSubmit)="saveList()">
       <div class="field">
         <label for="title">Title: </label>
-        <input type="text" id="title" formControlName="title" />
+        <input class="info-input" type="text" id="title" formControlName="title" />
       </div>
       <div class="field">
         <label for="description">Description: </label>
-        <input type="text" id="description" formControlName="description" />
+        <input class="info-input" type="text" id="description" formControlName="description" />
       </div>
-      <div class="field">
-        <input type="submit" value="Crear Lista" />
+      <div class="btn-submit">
+        <input class="btn-2 create-btn" type="submit" value="Crear Lista" />
       </div>
     </form>
   </fieldset>
+</div>
 </section>
-<app-footer></app-footer>
+
