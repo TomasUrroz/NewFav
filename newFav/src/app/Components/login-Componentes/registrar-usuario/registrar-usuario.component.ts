@@ -43,8 +43,9 @@ ngOnInit(): void {
 
     this.list = await this.user.getUsers();
     const usuarioEncontrado: User|undefined = this.list.find((i) => i.user === this.usuarioNuevo.controls['username'].value);
+    const usuarioEncontradoEmail: User|undefined = this.list.find((i) => i.user === this.usuarioNuevo.controls['email'].value); /**Chequear */
 
-    if(usuarioEncontrado){
+    if(usuarioEncontrado || usuarioEncontradoEmail){
       alert('El usuario elegido ya existe');
       this.usuarioNuevo.reset();
       return;

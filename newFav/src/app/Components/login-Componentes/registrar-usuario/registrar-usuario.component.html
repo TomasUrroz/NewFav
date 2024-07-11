@@ -1,44 +1,62 @@
 <div class="wrapper">
-    <div  class="cuerpo">
-        <img class="logo" src="../../../../assets/img/login2.png" alt="Login">
-        <p>Registrarse</p>
-        <form (ngSubmit)="registraUsuario()" [formGroup]="usuarioNuevo">
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" formControlName="username" placeholder="User">
-                <label for="user">Username: </label>
-              </div>  
-              
-              <div class="form-floating mb-3">
-                <input type="email" class="form-control" formControlName="email" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-                <span *ngIf="usuarioNuevo.get('email')?.hasError('required') && usuarioNuevo.get('email')?.touched" class="text-danger errorLable">
-                    El <strong>email</strong> es requerido.
-                </span>
-                <span *ngIf="usuarioNuevo.get('email')?.hasError('email') && usuarioNuevo.get('email')?.touched" class="text-danger errorLabel">
-                  El <strong>email</strong> es invalido
-                </span>
-              </div>
+  <div class="cuerpo">
+    <img class="logo" src="../../../../assets/img/login2.png" alt="Login">
+    <p>Registrarse</p>
+    <form (ngSubmit)="registraUsuario()" [formGroup]="usuarioNuevo">
+      <div class="form-floating mb-3">
+        <input type="user" class="form-control" formControlName="username" placeholder="User">
+        <label for="user">Username: </label>
+        <span *ngIf="usuarioNuevo.get('username')?.hasError('required') && usuarioNuevo.get('username')?.touched"
+          class="text-danger errorLable">
+          El <strong>Username</strong> es requerido.
+        </span>
+      </div>
 
-              <div class="form-floating mb-3">
-                <input type="password" class="form-control" formControlName="password" placeholder="Password">
-                <label for="floatingPassword">Password</label>
-                <span *ngIf="usuarioNuevo.get('password')?.hasError('required') && usuarioNuevo.get('password')?.touched" class="text-danger errorLabel">
-                  La <strong>password</strong> es requerida
-                 </span>
-                 <span *ngIf="usuarioNuevo.get('password')?.hasError('minlength') && usuarioNuevo.get('password')?.touched" class="text-danger errorLabel">
-                  El <strong>password</strong> debe tener 6 caracteres
-                </span>
-              </div>
-              
-              <div class="form-floating mb-3">
-                <input type="password" class="form-control" formControlName="repetirPassword" placeholder="Repetir Password">
-                <label for="floatingPassword">Repetir Password</label>
-              </div>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" formControlName="email" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+        <span *ngIf="usuarioNuevo.get('email')?.hasError('required') && usuarioNuevo.get('email')?.touched"
+          class="text-danger errorLable">
+          El <strong>email</strong> es requerido.
+        </span>
+        <span *ngIf="usuarioNuevo.get('email')?.hasError('email') && usuarioNuevo.get('email')?.touched"
+          class="text-danger errorLabel">
+          El <strong>email</strong> es invalido
+        </span>
+      </div>
 
-              <div class="d-grid gap-2 mb-3">
-                <button class="btn btn-primary btn-lg" [disabled]="usuarioNuevo.invalid" type="submit">Registrarse</button>
-              </div>
-              <a routerLink="/login">Volver</a>
-        </form>
-    </div>
+      <div class="form-floating mb-3">
+        <input type="password" class="form-control" formControlName="password" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+        <span *ngIf="usuarioNuevo.get('password')?.hasError('required') && usuarioNuevo.get('password')?.touched"
+          class="text-danger errorLabel">
+          La <strong>password</strong> es requerida
+        </span>
+        <span *ngIf="usuarioNuevo.get('password')?.hasError('minlength') && usuarioNuevo.get('password')?.touched"
+          class="text-danger errorLabel">
+          El <strong>password</strong> debe tener 6 caracteres
+        </span>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="password" class="form-control" formControlName="repetirPassword" placeholder="Repetir Password">
+        <label for="floatingPassword">Repetir Password</label>
+        <span
+          *ngIf="usuarioNuevo.get('repetirPassword')?.hasError('required') && usuarioNuevo.get('repetirPassword')?.touched"
+          class="text-danger errorLabel">
+          Repetir <strong>password</strong> es requerido.
+        </span>
+        <span
+          *ngIf="usuarioNuevo.get('repetirPassword')?.hasError('minlength') && usuarioNuevo.get('repetirPassword')?.touched"
+          class="text-danger errorLabel">
+          El <strong>password</strong> debe tener 6 caracteres.
+        </span>
+      </div>
+
+      <div class="d-grid gap-2 mb-3">
+        <button class="btn btn-primary btn-lg" [disabled]="usuarioNuevo.invalid" type="submit">Registrarse</button>
+      </div>
+      <a routerLink="/login">Volver</a>
+    </form>
+  </div>
 </div>
