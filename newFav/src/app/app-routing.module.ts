@@ -10,6 +10,7 @@ import { createAuthGuard } from './guards/login-guard';
 import { PlaylistPageComponent } from './Pages/playlist-page/playlist-page.component';
 import { ProfilePageComponent } from './Pages/profile-page/profile-page.component';
 import { NewPlaylistPageComponent } from './Pages/new-playlist-page/new-playlist-page.component';
+import { ContactoComponent } from './Components/contacto/contacto.component';
 //import { AuthGuardFeatures } from './guards/about-guards';
 
 const routes: Routes = [
@@ -21,7 +22,7 @@ const routes: Routes = [
   { path: "playlist", component: PlaylistPageComponent, canActivate: [AuthGuard] },
   { path: "new-playlist", component: NewPlaylistPageComponent, canActivate: [AuthGuard] },
   { path: "features", component: FeaturesPageComponent},
-
+  { path: "contacto", component: ContactoComponent, canActivate: [AuthGuard]},
   { path: "**", redirectTo: 'login' },
 
 

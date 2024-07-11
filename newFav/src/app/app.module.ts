@@ -28,6 +28,7 @@ import { ProfilePageComponent } from './Pages/profile-page/profile-page.componen
 import { AboutComponent } from './Components/about/about.component';
 import { FeatureComponent } from './Components/feature/feature.component';
 import { NewPlaylistPageComponent } from './Pages/new-playlist-page/new-playlist-page.component';
+import { ContactoComponent } from './Components/contacto/contacto.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { NewPlaylistPageComponent } from './Pages/new-playlist-page/new-playlist
     ProfilePageComponent,
     AboutComponent,
     FeatureComponent,
-    NewPlaylistPageComponent
+    NewPlaylistPageComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,

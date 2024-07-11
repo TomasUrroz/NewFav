@@ -191,6 +191,33 @@
         }
       ],
       "description": "Para caminar"
+    },
+    {
+      "id": 6,
+      "title": "Running",
+      "user": "magdalena_829@gmail.com",
+      "date": "11/7/2024",
+      "songs": [
+        {
+          "id": "7LRMbd3LEoV5wZJvXT1Lwb",
+          "name": "T.N.T.",
+          "artist": "AC/DC",
+          "imageUrl": "https://i.scdn.co/image/ab67616d00001e02286a0837ff3424065a735e0a"
+        },
+        {
+          "id": "1xsYj84j7hUDDnTTerGWlH",
+          "name": "Dream On",
+          "artist": "Aerosmith",
+          "imageUrl": "https://i.scdn.co/image/ab67616d00001e02bbf0146981704a073405b6c2"
+        },
+        {
+          "id": "48UPSzbZjgc449aqz8bxox",
+          "name": "Californication",
+          "artist": "Red Hot Chili Peppers",
+          "imageUrl": "https://i.scdn.co/image/ab67616d00001e0294d08ab63e57b0cae74e8595"
+        }
+      ],
+      "description": "Una horita."
     }
   ]
 }
